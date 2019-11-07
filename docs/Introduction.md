@@ -1,7 +1,7 @@
 ---
 title: ポートフォリオ 
 date: 2019-11-07 17:15:00
-slug: Portfolio 
+slug: introduction 
 ---
 
 #  おかきょーのポートフォリオ

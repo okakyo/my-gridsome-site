@@ -45,7 +45,13 @@ module.exports = {
       options: {
         cacheTime: 600000
       }
-    }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
+    },
   ],
   chainWebpack: config => {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

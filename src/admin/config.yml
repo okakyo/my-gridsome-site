@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: OkaKyo/my-projects
+  repo: OkaKyo/gridSome
 
 media_folder: "static/uploads"
-public_folder: "/docs"
+public_folder: "/doc"
 
 collections:
   - name: "posts"

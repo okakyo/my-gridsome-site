@@ -1,9 +1,11 @@
 <template>
   <Layout>
-    <h1>
-      {{ $page.doc.title }}
-    </h1>
-     <div class="markdown" v-html="$page.doc.content" />
+    <div class="card">
+      <h2>
+        {{ $page.doc.title }}
+      </h2>
+      <div class="markdown" v-html="$page.doc.content" />
+     </div>
   </Layout>
 </template>
 
@@ -40,7 +42,7 @@ export default {
 
 /deep/ > h2 {
   padding-top: 100px;
-  margin-top: -80px;
+  margin-top : -80px;
 
   @include respond-above(md) {
     font-size: 2rem;
@@ -48,7 +50,16 @@ export default {
 }
 
 .markdown {
-  padding-bottom: 50vh;
+  padding-bottom: 0;
+  h2 {
+    border-bottom: groove #f3f4f5;
+  }
 }
+.card {
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  border: groove #f3f4f5
+}
+
 </style>
 

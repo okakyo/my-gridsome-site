@@ -4,9 +4,9 @@
       <h1>おかきょーのポートフォリオ</h1>
       <nav>
         <!-- To use other icons here, you need to import them in the Shortcut component -->
-        <Shortcut link="/getting-started" text="Introduction" icon="play-icon" />
-        <Shortcut link="/theme-configuration" text="Configuration" icon="sliders-icon" />
-        <Shortcut link="/introduction" text="Change colors" icon="eye-icon" />
+        <Shortcut link="/introduction" text="Introduction" icon="play-icon" />
+        <Shortcut link="/theme-configuration" text="Works" icon="sliders-icon" />
+        <Shortcut link="/introduction" text="ブログ" icon="eye-icon" />
       </nav>
       <GitLink class="git" size="large" />
     </div>
@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import GitLink from '~/components/GitLink.vue'
-import Shortcut from '~/components/Shortcut.vue'
+import GitLink from '~/components/atoms/GitLink.vue'
+import Shortcut from '~/components/atoms/Shortcut.vue'
 
 export default {
   components: {

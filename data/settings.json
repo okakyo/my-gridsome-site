@@ -4,19 +4,28 @@
       "section": "Introduction",
       "topics": [
         {
-          "title": "Getting started",
+          "title": "Getting Started",
           "slug": "getting-started"
+        }
+      ]
+    },{
+      "section": "Portfolio",
+      "topics": [
+        {
+          "title": "Theme Configuration",
+          "slug": "theme-configuration"
         }
       ]
     },
     {
-      "section": "Setup",
+      "section": "Portfolio",
       "topics": [
         {
-          "title": "Theme configuration",
-          "slug": "theme-configuration"
+          "title": "ポートフォリオ",
+          "slug": "introduction"
         }
       ]
     }
+
   ]
 }

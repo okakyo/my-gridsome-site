@@ -17,8 +17,8 @@ query {
 </static-query>
 
 <script>
-import Header from '~/components/Header.vue'
-import Sidebar from '~/components/Sidebar.vue'
+import Header from '~/components/molecules/Header.vue'
+import Sidebar from '~/components/molecules/Sidebar.vue'
 
 export default {
   components: {

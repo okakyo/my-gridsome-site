@@ -49,7 +49,7 @@ query Menu {
 </static-query>
 
 <script>
-import GitLink from '~/components/GitLink.vue'
+import GitLink from '~/components/atoms/GitLink.vue'
 import throttle from 'lodash/throttle'
 
 export default {
@@ -75,12 +75,12 @@ export default {
       }
     },
     sidebarScroll: function() {
-      let mainNavLinks = document.querySelectorAll('.topic.active + ul .sub-topic')
-      let fromTop = window.scrollY
+      let mainNavLinks = document.querySelectorAll('.topic.active + ul .sub-topic');
+      let fromTop = window.scrollY;
 
       mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash)
-        let allCurrent = document.querySelectorAll('.current'), i
+        let section = document.querySelector(link.hash);
+        let allCurrent = document.querySelectorAll('.current');
 
         if (section.offsetTop <= fromTop) {
           for (i = 0; i < allCurrent.length; ++i) {
@@ -178,6 +178,7 @@ ul {
 }
 
 .sub-topic {
+  text-indent: 1rem;
   font-size: .875rem;
   position: relative;
   opacity: .8;

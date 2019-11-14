@@ -1,23 +1,6 @@
 {
   "sidebar": [
     {
-      "section": "Introduction",
-      "topics": [
-        {
-          "title": "Getting Started",
-          "slug": "getting-started"
-        }
-      ]
-    },{
-      "section": "Portfolio",
-      "topics": [
-        {
-          "title": "Theme Configuration",
-          "slug": "theme-configuration"
-        }
-      ]
-    },
-    {
       "section": "Portfolio",
       "topics": [
         {

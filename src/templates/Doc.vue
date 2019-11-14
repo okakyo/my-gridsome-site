@@ -35,7 +35,7 @@ export default {
 </script>
 
 
-<style lang="scss" >
+<style lang="scss">
 /deep/ > p {
   opacity: .8;
 }
@@ -51,15 +51,11 @@ export default {
 
 .markdown {
   padding-bottom: 0;
-  li {
-    padding-inline-start:20px;
+  ui {
+    padding-inline-start:10px!important;
   }
 }
-.card {
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
-  border: groove #f3f4f5
-}
+
 
 </style>
 

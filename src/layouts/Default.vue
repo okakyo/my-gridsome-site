@@ -2,7 +2,6 @@
   v-app
     .layout
       Header
-            
       v-content
         v-container
           

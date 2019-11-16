@@ -1,7 +1,7 @@
 <template lang="pug">
   v-app
     .layout
-      Header
+      Headers
       v-content
         v-container
           

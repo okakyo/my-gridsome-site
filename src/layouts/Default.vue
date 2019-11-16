@@ -4,7 +4,6 @@
       Headers
       v-content
         v-container
-          
           slot
 
 </template>

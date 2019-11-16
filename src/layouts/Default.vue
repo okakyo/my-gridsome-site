@@ -1,16 +1,26 @@
-<template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+<template lang="pug">
+  v-app
+    .layout
+      Headers
+      v-navigation-drawer(clipped app v-model="drawer" :temporary="$vuetify.breakpoint.mdAndDown")
+        v-list
+            v-list-item
+                v-list-item-content
+                    v-list-item-title.title 岡　恭平
+                    v-list-item-subtitle John@yahoo.com
+                v-list-item-action
+                    v-icon mdi-menu-down
+            v-divider
+            v-list(nav dense)
+                v-list-item(link v-for="header in headersUrl" :to="header.url" :key="header.title")
+                    v-list-item-content
+                        v-list-item-title(v-text="header.title")
+            
+      v-content
+        v-container
+          
+          slot
+
 </template>
 
 <static-query>
@@ -21,30 +31,23 @@ query {
 }
 </static-query>
 
+<script>
+
+import Headers from '../components/templates/Headers';
+export default {
+  components:
+    {Headers},
+  data() {
+       return {
+           headersUrl: [
+               {title: 'About', url: '/about'},
+               
+           ],
+       };
+    },
+}
+</script>
+
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
 </style>

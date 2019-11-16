@@ -2,8 +2,33 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css'
+import colors from 'vuetify/es5/util/colors'
 
-export default function (Vue, { router, head, isClient }) {
+
+export default function (Vue, { router, head, isClient,appOptions }) {
+
+  Vue.use(Vuetify)
   // Set default layout as a global component
+  appOptions.vuetify = new Vuetify({
+    customVariables: ['~/assets/css/variables.scss'],
+    theme: {
+      dark: false,
+      themes: {
+        dark: {
+          primary: colors.grey.darken4,
+          accent: colors.shades.black,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      }
+    }
+  })
+
   Vue.component('Layout', DefaultLayout)
+
 }

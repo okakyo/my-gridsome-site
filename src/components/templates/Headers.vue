@@ -7,9 +7,10 @@
             v-btn(color="primary" text to="/" )
                 h2.white--text.mr-2 Top
         v-spacer
-        v-toolbar-title.hidden-md-and-down(v-for="header in headersUrl")
+        v-toolbar-title.hidden-md-and-down(v-for="header in headersUrl" :key="header.title")
             v-btn(color="primary" text :to="header.url")
                 h4.white--text.mr-2 {{header.title}}
+
 </template>
 
 <script>
@@ -19,7 +20,7 @@ export default {
        return {
            headersUrl: [
                {title: 'About', url: '/about'},
-               
+               {title: 'Blog', url: '/blog'},
            ],
        };
     },

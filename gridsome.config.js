@@ -19,11 +19,13 @@ module.exports = {
     },
   
     plugins: [
+      'gridsome-plugin-pug' ,
       {
         use: '@gridsome/source-filesystem',
         options: {
           path: 'blog/**/*.md',
           typeName: 'Post',
+          route: "/blog/:slug",
           remark: {
             plugins: [
               // ...local plugins
@@ -32,8 +34,4 @@ module.exports = {
         }
       }
     ],
-  
-  plugins: [
-    'gridsome-plugin-pug' 
-  ]
 }

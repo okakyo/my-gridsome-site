@@ -1,7 +1,7 @@
 <template lang="pug">
     article-card(title="Profile")
         template(v-slot:content)  
-            card-content(:title="title",:subTitle="subTitle",:imgURL="imgURL")
+            card-content(:title="title",:subTitle="subTitle",:imgUrl="image",:imgSize="imgSize")
             v-divider
             v-row.ma-2
                 v-avatar
@@ -22,7 +22,8 @@ export default {
         return{
             title: "Name: Oka Kyohei",
             subTitle: "0622okakyo@gmail.com",
-            imgURL: ""
+            image: "/IMG_1267.jpeg",
+            imgSize:96
         }
     }
 }

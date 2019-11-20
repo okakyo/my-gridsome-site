@@ -8,21 +8,18 @@
         v-flex(xs12 md6 lg3)
           profile-card
         v-flex(xs12 md6 lg9)
-          article-card(title="Career")
-            template(v-slot:content)
-              v-layout(row wrap)
-                v-flex.pa-2(xs12 md6 lg4  v-for="i in 10")
-                  cardContent
+          career-card
       v-layout.pa-2
         v-flex(xs12)
           article-card(title="Ability")
-            v-card-content
-              v-layout
-                v-flex
+            template(v-slot:content)
+              card-content
+              
 
       v-layout.pa-2
         v-flex(xs12)
           article-card(title="Works")
+          
           
 </template>
 <static-query>
@@ -34,6 +31,7 @@ import articleCard from '../components/organisms/cards/articleCards.vue'
 import imageCard from '../components/molecules/cards/imageCard.vue'
 import cardContent from '../components/organisms/content/cardContent.vue'
 import profileCard from '../components/templates/cards/profileCard.vue'
+import careerCard from '../components/templates/cards/careerCard.vue'
 export default {
   metaInfo: {
     title: 'Portfolio'
@@ -43,6 +41,7 @@ export default {
     articleCard,
     cardContent,
     profileCard,
+    careerCard,
   }
   
 

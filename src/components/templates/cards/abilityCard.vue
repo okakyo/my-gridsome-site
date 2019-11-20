@@ -14,7 +14,7 @@ export default {
     components:{
         cardContent,articleCard,
     },
-    data(){
+    data:function(){
         return{
             title: "Name: Oka Kyohei",
             subTitle: "0622okakyo@gmail.com",

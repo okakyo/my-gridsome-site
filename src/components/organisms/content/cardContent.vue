@@ -2,11 +2,12 @@
     v-card-text
         v-layout
             v-row(justify="space-around")
-                v-avatar(justify="space-around" size="96")
-                    v-img(:src="imgUrl?imgUrl:defaultImage")
+                v-avatar(justify="space-around" :size="imgSize")
+                    v-img(:src="imgUrl")
                 v-card-title.headline--title
                     h4 {{title}}
                 v-card-subtitle {{subTitle}}
+                slot(name="detail")
 </template>
 <script>
 export default {
@@ -14,16 +15,16 @@ export default {
     props:{
         title:"", 
         subTitle:"",
-        imgUrl:""
-    },
-    data(){
-        return {
-            defaultImage:'/m_e_others_500.png',
-        }
-    },
-    created:{
-        
+        imgSize:{
+            Number,
+            default:50
+        },
+        imgUrl:{
+            type:String,
+            default: '/m_e_others_500.png'
+        },
     }
+    
     
 }
 </script>

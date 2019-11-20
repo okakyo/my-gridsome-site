@@ -2,9 +2,9 @@
   v-app
     .layout
       Headers
-      v-content
-        v-container
-          slot
+      v-content.grey.lighten-4
+        slot
+            
 
 </template>
 
@@ -25,7 +25,7 @@ export default {
   data() {
        return {
            headersUrl: [
-               {title: 'About', url: '/about'},
+               {title: 'works', url: '/about'},
                {title: 'Blog', url: '/blog'},
                
            ],

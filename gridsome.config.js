@@ -6,32 +6,36 @@
 
 module.exports = {
   siteName: 'Gridsome',
-
-    transformers: {
-      remark: {
-        externalLinksTarget: '_blank',
-        externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-        anchorClassName: 'icon icon-link',
-        plugins: [
-          // ...global plugins
-        ]
-      }
-    },
+  template:{
+    Doc: 'blog/:slugs'
+  },
   
-    plugins: [
-      'gridsome-plugin-pug' ,
-      {
-        use: '@gridsome/source-filesystem',
-        options: {
-          path: 'blog/**/*.md',
-          typeName: 'Post',
-          route: "/blog/:slug",
-          remark: {
-            plugins: [
-              // ...local plugins
-            ]
-          }
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        // ...global plugins
+      ]
+    }
+  },
+
+  plugins: [
+    'gridsome-plugin-pug' ,
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'blog/**/*.md',
+       
+        typeName: 'Doc',
+        
+        remark: {
+          plugins: [
+            // ...local plugins
+          ]
         }
       }
-    ],
+    }
+  ],
 }

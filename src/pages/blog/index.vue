@@ -1,8 +1,8 @@
 <template lang="pug">
     Layout
+        
         h2 This is blog-site
         v-layout
-        
 
 
 </template>

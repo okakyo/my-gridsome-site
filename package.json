@@ -16,6 +16,7 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@gridsome/remark-prismjs": "^0.3.0",
     "gridsome-plugin-pug": "0.0.3",
     "pug": "^2.0.4",
     "webpack-node-externals": "^1.7.2"

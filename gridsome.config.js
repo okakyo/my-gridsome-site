@@ -16,7 +16,7 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        // ...global plugins
+        '@gridsome/remark-prismjs'
       ]
     }
   },

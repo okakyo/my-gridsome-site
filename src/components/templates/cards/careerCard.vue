@@ -23,15 +23,15 @@ export default {
                  date:"2019年 8月 19日 ~30 日"
                 },
                 {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
-                 name:"Yahoo Japan",
+                 name:"Team Lab",
                  date:"2019年 8月 19日 ~30 日"
                 },
                 {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
-                 name:"Yahoo Japan",
+                 name:"Logly",
                  date:"2019年 8月 19日 ~30 日"
                 },
                 {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
-                 name:"Yahoo Japan",
+                 name:"dotStar",
                  date:"2019年 8月 19日 ~30 日"
                 },
             ]

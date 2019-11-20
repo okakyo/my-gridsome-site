@@ -18,21 +18,21 @@ export default {
         return {
             workedCompanyInfo:[
                 
-                {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
+                {logoUrl:"/yahoo-logo.jpg",
                  name:"Yahoo Japan",
                  date:"2019年 8月 19日 ~30 日"
                 },
-                {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
+                {logoUrl:"/600px-Teamlab_logo_RGB_color.png",
                  name:"Team Lab",
                  date:"2019年 8月 19日 ~30 日"
                 },
-                {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
+                {logoUrl:"/icon-Logly.png",
                  name:"Logly",
-                 date:"2019年 8月 19日 ~30 日"
+                 date:"2019年 8月 5日 ~9 日"
                 },
-                {logoUrl:"https://s.yimg.jp/c/logo/f/2.0/news_r_34_2x.png",
+                {logoUrl:"",
                  name:"dotStar",
-                 date:"2019年 8月 19日 ~30 日"
+                 date:"2019年 4月~ "
                 },
             ]
         }

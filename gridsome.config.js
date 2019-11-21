@@ -35,7 +35,7 @@ module.exports = {
             'node_modules/prismjs/**/*.js'
             // ここまで
           ],
-          extractor: TailwindExtractor,
+          
           extensions: ['vue', 'js', 'jsx', 'md']
       }
     },

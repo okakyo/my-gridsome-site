@@ -43,13 +43,17 @@ export default {
 }
 .markdown p {
   line-height: 1.8rem;
-  text-indent: 1rem;
 }
 .markdown code {
   box-shadow: none;
 }
+
+.markdown pre{
+  margin: 0.5rem 0;
+}
 .markdown code::before{
   content: "";
+  
 }
 .markdown img{
   max-width: 90%;

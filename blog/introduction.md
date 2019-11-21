@@ -1,3 +1,9 @@
+---
+title: Pydantic 入門
+date: 2019-11-18 20:00:00 
+slug: ポートフォリオ
+---
+
 こんにちは、おかきょーです。
 今回は、pydantic について　記事を書いていきたいと思います。
 
@@ -305,3 +311,5 @@ print(DemoModel(ts='2017-11-08T14:00'))
 
 ## 参考文献
 Pydanit 公式ドキュメント(https://pydantic-docs.helpmanual.io/)
+
+

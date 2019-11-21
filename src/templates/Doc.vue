@@ -1,8 +1,9 @@
 <template lang="pug">
   Layout
-    v-Layout.ma-2
+    v-layout.ma-2
       v-container.white
-        h1 {{ $page.doc.title }}
+        h1.blog-title {{ $page.doc.title }}
+        v-divider
         .markdown(v-html="$page.doc.content")
      
 </template>
@@ -33,6 +34,10 @@ export default {
 }
 </script>
 <style>
+.blog-title {
+  text-align: center;
+  margin: 0.5rem;
+}
 .markdown{
   padding: 5%;
 }

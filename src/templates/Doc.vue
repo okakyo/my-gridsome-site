@@ -2,9 +2,12 @@
   Layout
     v-layout.ma-2
       v-container.white
-        h1.blog-title {{ $page.doc.title }}
-        v-divider
-        .markdown(v-html="$page.doc.content")
+        v-flex(xs12 md10 lg8)
+          h1.blog-title {{ $page.doc.title }}
+          v-divider
+          .markdown(v-html="$page.doc.content")
+        v-flex.hidden-xs-only
+          
      
 </template>
 
@@ -44,6 +47,11 @@ export default {
 .markdown p {
   line-height: 1.8rem;
 }
+.markdown li p {
+  line-height: 1rem;
+  margin-block-end: 0.5em;
+}
+
 .markdown code {
   box-shadow: none;
 }

@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
-
+import 'prismjs/themes/prism-tomorrow.css'
 
 export default function (Vue, { router, head, isClient,appOptions }) {
 

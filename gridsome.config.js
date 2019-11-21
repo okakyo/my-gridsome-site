@@ -16,23 +16,22 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        '@gridsome/remark-prismjs'
+        
       ]
     }
   },
 
   plugins: [
     'gridsome-plugin-pug' ,
+    
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'blog/**/*.md',
-       
         typeName: 'Doc',
-        
         remark: {
           plugins: [
-            // ...local plugins
+            '@gridsome/remark-prismjs'
           ]
         }
       }

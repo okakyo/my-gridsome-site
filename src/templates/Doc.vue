@@ -1,12 +1,10 @@
-<template>
-  <Layout>
-    <div class="card">
-      <h2>
-        {{ $page.doc.title }}
-      </h2>
-      <div class="markdown" v-html="$page.doc.content" />
-     </div>
-  </Layout>
+<template lang="pug">
+  Layout
+    v-Layout.ma-2
+      v-container.white
+        h1 {{ $page.doc.title }}
+        .markdown(v-html="$page.doc.content")
+     
 </template>
 
 <page-query>
@@ -21,7 +19,9 @@ query Doc ($path: String!) {
 }
 </page-query>
 <script>
+
 export default {
+  
   metaInfo() {
     return {
       title: this.$page.doc.title,
@@ -32,3 +32,19 @@ export default {
   }
 }
 </script>
+<style>
+.markdown p {
+  line-height: 1.8rem;
+  text-indent: 1rem;
+}
+.markdown code {
+  box-shadow: none;
+}
+.markdown code::before{
+  content: "";
+}
+.markdown h1, .markdown h2 {
+  border-bottom :1px solid #ddd ;
+  margin: 1rem 0.5rem
+}
+</style>

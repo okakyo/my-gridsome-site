@@ -23,6 +23,12 @@ module.exports = {
 
   plugins: [
     'gridsome-plugin-pug' ,
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/10fsdftfah4axdghwdsza/admin`
+      }
+    },
     
     {
       use: '@gridsome/source-filesystem',

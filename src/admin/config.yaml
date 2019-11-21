@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: okakyo/gridSome
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blogs"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tag", name: "tag", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "description", name: "description", widget: "markdown"}

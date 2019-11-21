@@ -11,15 +11,10 @@
           career-card
       v-layout.pa-2
         v-flex(xs12)
-          article-card(title="Ability")
-            template(v-slot:content)
-              card-content
-              
-
+          ability-card
       v-layout.pa-2
         v-flex(xs12)
-          article-card(title="Works")
-          
+          worksCard
           
 </template>
 <static-query>
@@ -32,16 +27,18 @@ import imageCard from '../components/molecules/cards/imageCard.vue'
 import cardContent from '../components/organisms/content/cardContent.vue'
 import profileCard from '../components/templates/cards/profileCard.vue'
 import careerCard from '../components/templates/cards/careerCard.vue'
+import abilityCard from '../components/templates/cards/abilityCard.vue'
+import worksCard from '../components/templates/cards/worksCard.vue'
 export default {
   metaInfo: {
     title: 'Portfolio'
   },
   components:{
-    imageCard,
-    articleCard,
-    cardContent,
+    
     profileCard,
     careerCard,
+    abilityCard,
+    worksCard,
   }
   
 

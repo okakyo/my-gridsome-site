@@ -22,23 +22,7 @@ module.exports = {
   },
 
   plugins: [
-    'gridsome-plugin-pug' ,
-    {
-      use: 'gridsome-plugin-purgecss',
-      options: {
-        content: [
-            './src/**/*.vue',
-            './src/**/*.js',
-            './src/**/*.jsx',
-            './src/**/*.md',
-            // 以下の１行を追加
-            'node_modules/prismjs/**/*.js'
-            // ここまで
-          ],
-          
-          extensions: ['vue', 'js', 'jsx', 'md']
-      }
-    },
+    
     {
       use: `gridsome-plugin-netlify-cms`,
       options: {

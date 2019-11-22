@@ -2,8 +2,11 @@
     article-card(title="Ability")
         template(v-slot:content )
             v-layout(row wrap)
-                v-flex(xs12 md4 lg3 v-for="i in 10" :key="i")
-                    card-content(:title="title",:subTitle="subTitle",:imgURL="imgURL" )
+                v-flex(xs12 md4 lg3 v-for="ability in languageAbility" :key="ability.title")
+                    card-content(:title="ability.title",:subTitle="ability.subTitle",:imgURL="ability.imgURL" )
+                        template(v-slot:detail)
+                            v-rating(value="4" background-color="yellow" color="yellow" readonly)
+                            v-divider
 
 </template>
 
@@ -25,8 +28,77 @@ export default {
                 {
                  title: "Python",
                  subTitle:"2017/4~",
+                 rating:4,
                  imgURL:"",
-                }
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                {
+                 title: "Python",
+                 subTitle:"2017/4~",
+                 rating:4,
+                 imgURL:"",
+                },
+                
+
             ]
         }
     }

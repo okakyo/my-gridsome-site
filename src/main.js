@@ -10,6 +10,15 @@ import 'prismjs/themes/prism-tomorrow.css'
 export default function (Vue, { router, head, isClient,appOptions }) {
 
   Vue.use(Vuetify)
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+  })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css'
+  })
+  
   // Set default layout as a global component
   appOptions.vuetify = new Vuetify({
     customVariables: ['~/assets/css/variables.scss'],

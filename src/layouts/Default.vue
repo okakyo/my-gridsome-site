@@ -1,7 +1,8 @@
 <template lang="pug">
   v-app
     .layout
-      Headers
+      
+      headers
       v-content.grey.lighten-4
         slot
             
@@ -18,10 +19,14 @@ query {
 
 <script>
 
-import Headers from '../components/templates/Headers';
+import Headers from '../components/templates/Headers.vue';
+import Sidebar from '../components/templates/Sidebar.vue';
 export default {
   components:
-    {Headers},
+    {Headers,Sidebar},
+  props:{
+    isShow:false
+  },
   data() {
        return {
            headersUrl: [

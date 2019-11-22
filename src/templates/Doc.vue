@@ -1,12 +1,16 @@
 <template lang="pug">
   Layout
-    v-layout.ma-2
-      v-container
+    
+    v-container
+      
+      v-layout(row wrap).ma-2
+        v-flex.hidden-xs-only(md1 lg2)
         v-flex.white(xs12 md10 lg9)
           h1.blog-title {{ $page.doc.title }}
           v-divider
           .markdown(v-html="$page.doc.content")
-        v-flex.hidden-xs-only
+        Sidebar
+          
 
      
 </template>
@@ -23,9 +27,11 @@ query Doc ($path: String!) {
 }
 </page-query>
 <script>
-
+import Sidebar from '../components/templates/Sidebar.vue'
 export default {
-  
+  components:{
+    Sidebar
+  },
   metaInfo() {
     return {
       title: this.$page.doc.title,

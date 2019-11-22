@@ -4,10 +4,11 @@
             v-row(justify="space-around")
                 v-avatar(justify="space-around" :size="imgSize")
                     v-img(:src="imgUrl")
-                v-card-title.headline--title
-                    h4 {{title}}
-                v-card-subtitle {{subTitle}}
-                slot(name="detail")
+                v-list
+                    v-card-title.headline--title
+                        h4 {{title}}
+                    v-card-subtitle {{subTitle}}
+                    slot(name="detail")
 </template>
 <script>
 export default {
@@ -17,11 +18,11 @@ export default {
         subTitle:"",
         imgSize:{
             Number,
-            default:50
+            default:80
         },
         imgUrl:{
             type:String,
-            default: '/m_e_others_500.png'
+            default: '/noimage.png'
         },
     }
     

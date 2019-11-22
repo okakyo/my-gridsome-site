@@ -14,7 +14,7 @@
           ability-card
       v-layout.pa-2
         v-flex(xs12)
-          worksCard
+          works-card
           
 </template>
 <static-query>
@@ -22,8 +22,7 @@
 </static-query>
 <script>
 
-import articleCard from '../components/organisms/cards/articleCards.vue'
-import imageCard from '../components/molecules/cards/imageCard.vue'
+
 import cardContent from '../components/organisms/content/cardContent.vue'
 import profileCard from '../components/templates/cards/profileCard.vue'
 import careerCard from '../components/templates/cards/careerCard.vue'

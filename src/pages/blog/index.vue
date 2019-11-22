@@ -1,8 +1,9 @@
 <template lang="pug">
     Layout
-        
-        h2 This is blog-site
-        v-layout
+        v-layout.ma-2
+            v-container.white
+                h2 Sorry! This site is building!
+            
 
 
 </template>

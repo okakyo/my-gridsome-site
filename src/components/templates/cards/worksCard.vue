@@ -3,7 +3,7 @@
         template(v-slot:content)
             v-layout(row wrap)
                 v-flex.pa-2(xs12 md6 lg4  v-for="i in 10" :key="i")
-                    cardContent
+                    card-content
 </template>
 <script>
 

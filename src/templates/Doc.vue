@@ -1,13 +1,13 @@
 <template lang="pug">
   Layout
     v-layout.ma-2
-      v-container.white
-        v-flex(xs12 md10 lg8)
+      v-container
+        v-flex.white(xs12 md10 lg9)
           h1.blog-title {{ $page.doc.title }}
           v-divider
           .markdown(v-html="$page.doc.content")
         v-flex.hidden-xs-only
-          
+
      
 </template>
 

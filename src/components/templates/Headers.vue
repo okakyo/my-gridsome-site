@@ -20,8 +20,7 @@ export default {
    data() {
        return {
            headersUrl: [
-               {title: 'About', url: '/about'},
-               {title: 'Blog', url: '/blog'},
+               {}
            ],
        };
     },

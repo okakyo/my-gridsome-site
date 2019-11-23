@@ -20,7 +20,7 @@ export default {
                 {
                     title:"ポートフォリオサイト",
                     hrefURL:"/",
-                    imgURL:"/portfolio.png",
+                    imgURL:"/portfolio.jpg",
                     GitHub:"https://github.com/okakyo/gridSome", 
                  },
                  {

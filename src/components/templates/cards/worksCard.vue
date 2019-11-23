@@ -18,7 +18,7 @@ export default {
         return {
             worksInfo:[
                 {
-                    title:"ポートフォリオサイト",
+                    title:"ポートフォリオ",
                     hrefURL:"/",
                     imgURL:"/my-portfolio.png",
                     GitHub:"https://github.com/okakyo/gridSome", 

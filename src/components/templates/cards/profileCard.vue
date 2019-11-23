@@ -3,7 +3,7 @@
         template(v-slot:content)  
             card-content(:title="title",:subTitle="subTitle",:imgUrl="image",:imgSize="imgSize")
             v-divider
-            v-row
+            v-layout(justify="center")
                 // Twitter, Facebook, Qiita, GitHub
                 v-btn.ma-3(icon v-for="icon in snsIcons" :key="icon.title" :href="icon.href")
                     v-avatar

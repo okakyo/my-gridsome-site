@@ -2,38 +2,38 @@
     article-card(title="Works")
         template(v-slot:content)
             v-layout(row wrap)
-                v-flex.pa-2(xs12 md4 lg3  v-for="i in 2" :key="i")
-                    card-content
+                v-flex.pa-2(xs12 md4 lg3  v-for="work in worksInfo" :key="work.title")
+                    img-card(:work="work")
 </template>
 <script>
 
-import cardContent from '../../../components/organisms/content/cardContent.vue'
+import imgCard from '../../../components/organisms/cards/imgCard.vue'
 import articleCard from '../../../components/organisms/cards/articleCards.vue'
 export default {
     name:'workCard',
     components:{
-        cardContent,articleCard,
+        imgCard,articleCard,
     },
     data(){
         return {
             worksInfo:[
                 {
-                    title:"This Portfolio Site",
-                    hrefURL:"",
-                    imgURL:"",
-                    description:"", 
+                    title:"ポートフォリオサイト",
+                    hrefURL:"/",
+                    imgURL:"/スクリーンショット 2019-11-23 19.14.53.png",
+                    GitHub:"https://github.com/okakyo/gridSome", 
                  },
                  {
-                    title: "",
-                    hrefURL:"",
-                    imgURL:"",
-                    description:"",
+                    title: "飲み会提案ボット",
+                    hrefURL:"https://www.line-community.me/bot_detail?botid=5baf522e851f74632343b187",
+                    imgURL:"https://obs.line-scdn.net/0hSKCEp6DJDGR-PCGtgDFzM19hBwZNXhJvXFpEAlo0WlRTD0pcF1pLVlo0VgZUDR87Rg4UVTU8WgZbCEo6RB9CCw9vUgRWXA/f256x256",
+                    GitHub:"https://github.com/silloi/nomikai-suggest-bot",
                  },
                  {
-                     title:"",
-                     hrefURL:"",
-                     imgURL:"",
-                     description:""
+                     title:"危険地帯アラート",
+                     hrefURL:"https://dangeralert.herokuapp.com/",
+                     imgURL:"/スクリーンショット 2019-05-16 19.50.33.png",
+                     GitHub:"https://github.com/okakyo/DangerAlert"
                  }
 
             ]

@@ -1,9 +1,12 @@
 <template lang="pug">
     v-card-text
-        v-layout
-            v-row(justify="space-around")
-                v-avatar(justify="space-around" :size="imgSize")
-                    v-img(:src="imgUrl")
+        v-row
+            v-flex(xs12 md5 )
+                v-row(justify="space-around" )
+                    v-avatar(:size="imgSize" :tile="isLogo")
+                        v-img(:src="imgUrl")
+                    
+            v-flex(xs12 md10 )
                 v-list
                     v-card-title.headline--title
                         h4 {{title}}
@@ -14,11 +17,19 @@
 export default {
     name: 'cardContent',
     props:{
+        isLogo:{
+            type:Boolean,
+            default:false
+        },
+        isRow: {
+            type:Boolean,
+            default: false 
+        },
         title:"", 
         subTitle:"",
         imgSize:{
             Number,
-            default:80
+            default:60
         },
         imgUrl:{
             type:String,

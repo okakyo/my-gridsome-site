@@ -1,12 +1,12 @@
 <template lang="pug">
     article-card(title="Ability")
-        template(v-slot:content )
+        template(v-slot:content)
             v-layout(row wrap)
                 v-flex(xs12 md4 lg3 v-for="ability in languageAbility" :key="ability.title")
-                    card-content(:title="ability.title",:subTitle="ability.subTitle",:imgURL="ability.imgURL" )
+                    card-content(:title="ability.title", :imgUrl="ability.imgURL" :isLogo="isLogo")
                         template(v-slot:detail)
-                            v-rating(value="4" background-color="yellow" color="yellow" readonly)
-                            v-divider
+                            v-rating(:value="ability.rating" half-increments background-color="yellow darken-2" color="yellow darken-2" readonly small)
+                    v-divider
 
 </template>
 
@@ -21,84 +21,93 @@ export default {
     },
     data:function(){
         return{
-            title: "Name: Oka Kyohei",
-            subTitle: "0622okakyo@gmail.com",
-            imgURL: "",
+            isLogo:true,
+            
             languageAbility:[
                 {
                  title: "Python",
-                 subTitle:"2017/4~",
+                 
                  rating:4,
-                 imgURL:"",
+                 imgURL:"https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
+                 title: "JavaScript",
+                 
                  rating:4,
-                 imgURL:"",
+                 imgURL:"https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
+                 title: "TypeScript",
+                 
+                 rating:3,
+                 imgURL:"https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
+                 title: "Golang",
+                 
+                 rating:3,
+                 imgURL:"https://text.baldanders.info/images/attention/go-logo_blue.png",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
+                 title: "Java",
+                 rating:2,
+                 imgURL:"https://upload.wikimedia.org/wikipedia/de/e/e1/Java-Logo.svg",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
+                 title: "C/C++",
+                 
+                 rating:1,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/c.svg",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
+                 title: "Ruby",
+                 rating:1,
+                 imgURL:"https://www.ruby-lang.org/images/header-ruby-logo.png",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
+                 title: "Node.js/Express",
+                 rating:5,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg",
+                },{
+                 title: "Vue",
+                 
                  rating:4,
-                 imgURL:"",
+                 imgURL:"https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
+                 title: "React",
+                 
+                 rating:3,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/react.svg",
                 },
                 {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
-                },
-                {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
-                },
-                {
-                 title: "Python",
-                 subTitle:"2017/4~",
-                 rating:4,
-                 imgURL:"",
-                },
+                 title: "Angular",
                 
-
+                 rating:3,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/angular-icon.svg",
+                },
+                {
+                 title: "Flask",
+                 rating:3,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/flask.svg",
+                },
+                {
+                 title: "Django",
+                 
+                 rating:3,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/django.svg",
+                },
+                {
+                 title: "Spring Boot",
+                 rating:3,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/spring-3.svg",
+                },
+                {
+                 title: "Ruby on Rails",
+                 
+                 rating:2,
+                 imgURL:"https://cdn.worldvectorlogo.com/logos/rails.svg",
+                },
             ]
         }
     }

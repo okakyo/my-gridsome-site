@@ -1,7 +1,7 @@
 ---
 title: Pydantic 入門
 date: 2019-11-18 20:00:00 
-slug: portfolio
+slugs: hello
 ---
 
 こんにちは、おかきょーです。

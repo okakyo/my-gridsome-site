@@ -1,7 +1,6 @@
 <template lang="pug">
   v-app
     .layout
-      
       headers
       v-content.grey.lighten-4
         slot

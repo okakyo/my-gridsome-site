@@ -5,9 +5,9 @@
           h1 OkaKyo's Portfolio
     v-container
       v-layout.pa-2(row)
-        v-flex(xs12 md6 lg3)
+        v-flex(xs12 md4 lg3)
           profile-card
-        v-flex(xs12 md6 lg9)
+        v-flex(xs12 md8 lg9)
           career-card
       v-layout.pa-2
         v-flex(xs12)

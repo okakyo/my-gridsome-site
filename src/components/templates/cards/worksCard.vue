@@ -20,7 +20,7 @@ export default {
                 {
                     title:"ポートフォリオサイト",
                     hrefURL:"/",
-                    imgURL:"/スクリーンショット 2019-11-23 19.14.53.png",
+                    imgURL:"/portfolio.png",
                     GitHub:"https://github.com/okakyo/gridSome", 
                  },
                  {
@@ -32,7 +32,7 @@ export default {
                  {
                      title:"危険地帯アラート",
                      hrefURL:"https://dangeralert.herokuapp.com/",
-                     imgURL:"/スクリーンショット 2019-05-16 19.50.33.png",
+                     imgURL:"/danger-alert.png",
                      GitHub:"https://github.com/okakyo/DangerAlert"
                  }
 

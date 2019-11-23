@@ -1,6 +1,6 @@
 <template lang="pug">
   Layout() 
-    v-parallax(src="/home-office-2452806_1920.jpg")
+    v-parallax(src="/portfolio.jpg")
       v-row(justify="center" align="center")
           h1 OkaKyo's Portfolio
     v-container

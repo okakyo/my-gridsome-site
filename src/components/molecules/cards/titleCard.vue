@@ -9,7 +9,7 @@
                     v-card-text
                         v-card-title.justify-center
                             h2 {{card.title}}
-                    v-card-subtitle {{card.date}}
+                    v-card-subtitle {{card.date |moment}}
 
 </template>
 
@@ -29,7 +29,11 @@ export default Vue.extend({
             }]
         }
     },
-    methods:{
+    filters: {
+        moment: function (date) {
+            const datetime=new Date(date)
+            return `${datetime.getFullYear()}/${datetime.getMonth()+1}/${datetime.getDate()}`;
+        }
     }
 });
 </script>

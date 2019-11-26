@@ -12,10 +12,9 @@ collections:
     label: "Blogs"
     folder: "blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Tag", name: "tag", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
+      
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Content", name: "body", widget: "markdown"}

@@ -1,7 +1,7 @@
 ---
 title: Pydantic 入門
 tag: プログラミング
-slug: pydantic-introduction
+slug: pydantic
 date: 2019-11-18T20:00:00.000Z
 ---
 

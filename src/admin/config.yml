@@ -12,7 +12,7 @@ collections:
     label: "Blogs"
     folder: "blog"
     create: true
-    slug: "{{fieldfields.slug}}"
+    slug: "{{fields.slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Tag", name: "tag", widget: "string"}

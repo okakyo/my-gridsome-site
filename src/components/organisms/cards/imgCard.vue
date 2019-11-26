@@ -7,7 +7,6 @@
         v-divider
         v-card-actions
             v-spacer
-
             v-btn(icon :href="work.GitHub")
                 v-icon mdi-github-box
             v-btn(icon :href="work.hrefURL")

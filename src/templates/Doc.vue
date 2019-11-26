@@ -1,6 +1,6 @@
 <template lang="pug">
   Layout
-    
+    sidebar
     v-container
       
       v-layout(row wrap).ma-2
@@ -9,7 +9,7 @@
           h1.blog-title {{ $page.doc.title }}
           v-divider
           .markdown(v-html="$page.doc.content")
-        Sidebar
+        
           
 
      
@@ -32,6 +32,7 @@ export default {
   components:{
     Sidebar
   },
+  
   metaInfo() {
     return {
       title: this.$page.doc.title,

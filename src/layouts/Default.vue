@@ -5,7 +5,6 @@
       v-content.grey.lighten-4
         slot
             
-
 </template>
 
 <static-query>
@@ -19,10 +18,10 @@ query {
 <script>
 
 import Headers from '../components/templates/Headers.vue';
-import Sidebar from '../components/templates/Sidebar.vue';
+
 export default {
   components:
-    {Headers,Sidebar},
+    {Headers},
   props:{
     isShow:false
   },

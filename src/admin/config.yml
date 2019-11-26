@@ -5,12 +5,14 @@ backend:
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
+publish_mode: editorial_workflow 
+
 collections:
   - name: "blog"
     label: "Blogs"
     folder: "blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fieldfields.slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Tag", name: "tag", widget: "string"}

@@ -3,7 +3,7 @@
         v-list
             v-list-item
                 v-list-item-title
-                    h2 {{$page.doc.title}}
+                    h2(style="display:inline;") {{$page.doc.title}}
         v-divider
         v-list(dense flat)
             v-list-item-group(dense color="primary"  v-for="{ node }  in $static.allDoc.edges" :key="node.title" active-class)

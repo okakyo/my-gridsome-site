@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Gridsome',
   template:{
-    Doc: 'blog/:slugs'
+    Doc: '/blog/:slugs'
   },
   
   transformers: {
@@ -34,7 +34,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'blog/**/*.md',
-        route:'blog/:slugs',
+        route: "/blog/:slugs",
         typeName: 'Doc',
         remark: {
           plugins: [

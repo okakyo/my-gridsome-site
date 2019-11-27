@@ -2,7 +2,7 @@
     Layout
         v-container.white
             v-layout(row wrap).ma-2
-                v-flex(xs12 md6  v-for="{node} in $static.allDoc.edges")
+                v-flex(xs12 md6  v-for="{node} in $static.allDoc.edges" :key="node.title")
                     title-card.pa-2(:card="node")
 
 </template>
@@ -14,6 +14,7 @@ query {
                 title
                 path 
                 date
+                tag
             }
         }
     }

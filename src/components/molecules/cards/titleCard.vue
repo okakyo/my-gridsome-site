@@ -4,12 +4,14 @@
             template(v-slot:default="{ hover }" )
                 v-card(
                     outlined :href="card.path"
-                    :elevation="hover ? 12 : 2"
+                    :elevation="hover ? 10 : 2"
                 )
                     v-card-text
                         v-card-title.justify-center
                             h2 {{card.title}}
-                    v-card-subtitle {{card.date |moment}}
+                        v-chip.mb-2(outlined) {{ card.tag}}
+                        v-divider
+                    v-card-subtitle {{card.date |moment}} 更新
 
 </template>
 

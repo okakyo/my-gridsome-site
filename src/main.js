@@ -18,7 +18,7 @@ export default function (Vue, { router, head, isClient,appOptions }) {
     rel: 'stylesheet',
     href: 'https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css'
   })
-  
+
   // Set default layout as a global component
   appOptions.vuetify = new Vuetify({
     customVariables: ['~/assets/css/variables.scss'],

@@ -22,9 +22,7 @@ Gridsome は、Vue.js をベースした静的サイト構築するためのフ�
 - Pug 
 - Netlify CMS etc... 
 
-## GraphQL を実装していく
 
-- ### page-query とstatic-query の違い
 
 ## デプロイしてみる
 ## 応用編

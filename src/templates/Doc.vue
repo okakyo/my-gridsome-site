@@ -7,13 +7,7 @@
         v-flex.hidden-xs-only(md1 lg2)
         v-flex.white(xs12 md10 lg9)
           h1.blog-title {{ $page.doc.title }}
-          
-            v-btn
-              v-icon
-            v-btn
-              v-icon
-            v-btn
-              v-icon
+    
           v-divider
           .markdown(v-html="$page.doc.content")
         

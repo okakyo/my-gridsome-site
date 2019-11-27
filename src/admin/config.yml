@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: okakyo/gridSome
+  repo: okakyo/my-gridsome-site
 
 media_folder: "static/uploads"
 public_folder: "/uploads"

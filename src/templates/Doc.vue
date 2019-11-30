@@ -5,8 +5,8 @@
       
       v-layout(row wrap).ma-2
         v-flex.hidden-xs-only(md1 lg2)
-        v-flex.white(xs12 md10 lg9)
-          h1.blog-title {{ $page.doc.title }}
+        v-flex.ma-3.white(xs12 md10 lg9)
+          h1.blog-title.pa-2 {{ $page.doc.title }}
     
           v-divider
           .markdown(v-html="$page.doc.content")

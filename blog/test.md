@@ -8,7 +8,10 @@ date: 2019-11-26T20:15:41.251Z
 
 ## Gridsome とは何か
 Gridsome は、Vue.js をベースした静的サイト構築するためのフレームワークです。
-普通の
+
+これまでのVue.js を利用してのブログサイトを公開するのであれば、AWS(Amazon Web Service) や GCP(Google Cloud Platform )などのSQL が用意されているサーバーを借りてブログサイトを運用する必要があります.
+
+
 
 
 ## 事前準備
@@ -22,8 +25,4 @@ Gridsome は、Vue.js をベースした静的サイト構築するためのフ�
 - Pug 
 - Netlify CMS etc... 
 
-
-
-## デプロイしてみる
-## 応用編
- 
+## マークダウン

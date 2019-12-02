@@ -9,7 +9,7 @@
                 )
                     
                     v-flex(xs4)
-                        v-img
+                        v-img(:src="card.img")
                     v-flex(xs8)
                         v-card-text
                             v-card-title.justify-center

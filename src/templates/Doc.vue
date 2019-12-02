@@ -52,10 +52,10 @@ export default {
   padding: 5%;
 }
 .markdown p {
-  line-height: 1.8rem;
+  line-height: 2em;
 }
-.markdown li p {
-  line-height: 1rem;
+.markdown li {
+  line-height: 2em;
   margin-block-end: 0.5em;
 }
 

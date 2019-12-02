@@ -1,8 +1,8 @@
 <template lang="pug">
     v-app-bar(
-        :clipped-right="$vuetify.breakpoint.lgAndUp"
+        :clipped-left="$vuetify.breakpoint.lgAndUp"
         app
-        hide-on-scroll
+
         color="blue darken-3" dark)
         v-toolbar-title
             v-btn(color="primary" text to="/" )

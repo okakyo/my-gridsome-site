@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-navigation-drawer.grey.lighten-4(app  clipped  right :temporary="$vuetify.breakpoint.mdAndDown") 
+    v-navigation-drawer.grey.lighten-4(app  clipped  :temporary="$vuetify.breakpoint.mdAndDown") 
         v-list
             v-list-item
                 v-list-item-title
@@ -47,5 +47,10 @@ export default {
     },
     
 }
-
 </script>
+<style scoped>
+     .v-list-item {
+        min-height:35px;
+        font-size: 12px;
+    }
+</style>

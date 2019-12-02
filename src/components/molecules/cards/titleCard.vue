@@ -2,16 +2,24 @@
     .image-card
         v-hover
             template(v-slot:default="{ hover }" )
+                
                 v-card(
                     outlined :href="card.path"
-                    :elevation="hover ? 10 : 2"
+                    :elevation="hover ? 5 : 0"
                 )
-                    v-card-text
-                        v-card-title.justify-center
-                            h2 {{card.title}}
-                        v-chip.mb-2(outlined) {{ card.tag}}
-                        v-divider
+                    
+                    v-flex(xs4)
+                        v-img
+                    v-flex(xs8)
+                        v-card-text
+                            v-card-title.justify-center
+                                h2 {{card.title}}
+                            v-chip.mb-2(outlined) {{ card.tag}}
+                                
+                    v-divider
                     v-card-subtitle {{card.date |moment}} 更新
+                        v-expand-transition
+                            .d-flex.transition-fast-in-fast-out.darken-4.orange(v-if="hover" style="height:100%")
 
 </template>
 
@@ -20,7 +28,9 @@ import Vue from 'vue';
 export default Vue.extend({
     name: 'titleCard',
     props:{
-        card:""
+        card:{
+            type:String
+        }
     },
 
     data() {

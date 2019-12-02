@@ -4,12 +4,13 @@
             .pa-3
                 h1 ブログ記事
                 v-divider
-            v-layout(row wrap).ma-2
-                
-                v-flex(xs12 md8 v-for="{node} in $static.allDoc.edges" :key="node.title")
-                    title-card.pa-2(:card="node")
-                v-flex.hidden-xs-only(md4)
-
+            v-layout(row ).ma-2
+                v-flex.ma-3(xs12 md8 )
+                    div(v-for="{node} in $static.allDoc.edges" :key="node.title")
+                        title-card.pa-2(:card="node")
+                v-divider(vertical)
+                v-flex.ma-3(md3)
+                    p kぉんにちは
 
 </template>
 <static-query>

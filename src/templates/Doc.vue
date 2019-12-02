@@ -1,17 +1,14 @@
 <template lang="pug">
   Layout
-    sidebar
+    left-sidebar
     v-container
-      
       v-layout(row wrap).ma-2
-        v-flex.hidden-xs-only(md1 lg2)
-        v-flex.ma-3.white(xs12 md10 lg9)
-          h1.blog-title.pa-2 {{ $page.doc.title }}
-    
+        v-flex.ma-3.white(xs12 md10 lg8)
+          h2.blog-title.pa-2 {{ $page.doc.title }}
           v-divider
           .markdown(v-html="$page.doc.content")
-        
-          
+        v-flex.ma-3(md1 lg3)
+          right-sidebar
 
      
 </template>
@@ -28,10 +25,12 @@ query Doc ($path: String!) {
 }
 </page-query>
 <script>
-import Sidebar from '../components/templates/Sidebar.vue'
+import leftSidebar from '../components/templates/Sidebar/leftSidebar.vue'
+import rightSidebar from '../components/templates/Sidebar/rightSidebar.vue'
 export default {
   components:{
-    Sidebar
+    leftSidebar,
+    rightSidebar
   },
   
   metaInfo() {
@@ -79,7 +78,12 @@ export default {
   margin: 1rem  0.5rem ;
 }
 .markdown h1, .markdown h2 {
-  border-bottom :1px solid #ddd ;
-  margin: 1rem 0.5rem
+  border:1px solid #ddd ;
+  margin: 2rem 0rem;
+  background-color: #fff8e8;
+  border-left: #ffc06e solid 10px ;
+  padding: 0.5em 1em;
+
 }
+
 </style>

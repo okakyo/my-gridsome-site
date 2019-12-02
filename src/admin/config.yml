@@ -18,6 +18,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Tag", name: "tag", widget: "string"}
       - {label: "Slug", name: "slugs", widget: "string"}
-      - {label: "img", name: "image",widget: "string"}
+      - {label: "img", name: "image",widget: "image"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Content", name: "body", widget: "markdown"}

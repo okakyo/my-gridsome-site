@@ -5,7 +5,7 @@
                 
                 v-card(
                     outlined :href="card.path"
-                    :elevation="hover ? 5 : 0"
+                    :elevation="hover? 4: 0"
                 )
                     
                     v-flex(xs4)
@@ -18,8 +18,6 @@
                                 
                     v-divider
                     v-card-subtitle {{card.date |moment}} 更新
-                        v-expand-transition
-                            .d-flex.transition-fast-in-fast-out.darken-4.orange(v-if="hover" style="height:100%")
 
 </template>
 

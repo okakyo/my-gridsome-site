@@ -10,7 +10,7 @@
                         title-card.pa-2(:card="node")
                 v-divider(vertical)
                 v-flex.ma-3(md3)
-                    p kぉんにちは
+                    p こんにちは
 
 </template>
 <static-query>

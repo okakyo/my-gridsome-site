@@ -2,6 +2,7 @@
 title: エンジニア職インターンシップ選考に対してのアドバイス
 tag: インターンシップ
 slugs: internship-advice
+image: /uploads/142748.png
 date: 2019-11-30T04:52:54.681Z
 ---
 

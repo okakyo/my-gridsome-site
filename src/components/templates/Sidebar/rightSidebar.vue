@@ -1,9 +1,10 @@
 <template lang="pug">
-    v-list
-        v-list-item-title.ma-3 tags
+    v-list(dense nav link)
+        v-list-item-title.ma-3 タグ一覧
         v-divider
-        v-list-item(v-for=" {node} in $static.allDoc.edges" :key="node.tag")
-            v-list-title  {{node.tag}}
+        v-list-item-group
+            v-list-item(:to="'/blog/'+node.tag" v-for="{node} in $static.allDoc.edges")
+                v-list-item-title {{node.tag}}
 
 </template>
 

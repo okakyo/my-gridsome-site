@@ -14,31 +14,30 @@
 
 </template>
 <static-query>
-query {
-    allDoc{
-        edges {
-            node {
-                title
-                path 
-                date
-                tag
-
+    query doc{
+        allDoc {
+            edges {
+                node {
+                    title
+                    path
+                    date
+                    tag
+                }
             }
         }
-    }
 
-}
+    }
 </static-query>
 <script>
-import titleCard from '../../components/molecules/cards/titleCard.vue'
-import rightSidebar from '../../components/templates/Sidebar/rightSidebar.vue'
-export default {
-    name: 'blog',
-    components:{titleCard,rightSidebar},
-    metaInfo: {
-        title: 'Blog'
-  },
-}
+    import titleCard from '../../components/molecules/cards/titleCard.vue'
+    import rightSidebar from '../../components/templates/Sidebar/rightSidebar.vue'
+    export default {
+        name: 'blog',
+        components:{titleCard,rightSidebar},
+        metaInfo: {
+            title: 'Blog'
+        },
+    }
 </script>
 
 <style>

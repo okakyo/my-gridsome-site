@@ -5,7 +5,7 @@
                 
                 v-card(
                     outlined :href="card.path"
-                    :elevation="hover? 4: 0"
+                    :elevation="hover? 5: 0"
                 )
                     
                     v-flex(xs4)
@@ -21,13 +21,13 @@
 
 </template>
 
-<script lang="ts">
+<script >
 import Vue from 'vue';
 export default Vue.extend({
     name: 'titleCard',
     props:{
         card:{
-            type:String
+            type:Object
         }
     },
 

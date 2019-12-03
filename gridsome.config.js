@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Gridsome',
   template:{
-    Doc: '/blog/:slugs'
+    Doc: '/blog/:slugs/:tag',
   },
   
   transformers: {

@@ -1,6 +1,5 @@
 <template lang="pug">
   Layout
-    left-sidebar
     v-container
       v-layout(row wrap).ma-2
         v-flex.ma-3.white(xs12 md10 lg8)
@@ -23,13 +22,12 @@ query Doc ($path: String!) {
     content
   }
 }
+
 </page-query>
 <script>
-import leftSidebar from '../components/templates/Sidebar/leftSidebar.vue'
 import rightSidebar from '../components/templates/Sidebar/rightSidebar.vue'
 export default {
   components:{
-    leftSidebar,
     rightSidebar
   },
   

@@ -24,7 +24,7 @@ query {
                 path 
                 date
                 tag
-                img
+
 
             }
         }

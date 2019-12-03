@@ -8,7 +8,6 @@
                 v-flex.ma-3(xs12 md8 )
                     div(v-for="{node} in $static.allDoc.edges" :key="node.title")
                         title-card.pa-2(:card="node")
-                        p {{node}}
 
                 v-divider(vertical)
                 v-flex.ma-3(md3)

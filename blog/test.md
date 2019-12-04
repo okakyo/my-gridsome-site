@@ -2,7 +2,7 @@
 title: Gridsome で ブログを制作した話
 tag: プログラミング
 slugs: gridsome-blog
-image: /uploads/logo.png
+thumbnail: /uploads/logo.png
 date: 2019-11-26T20:15:41.251Z
 ---
 こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。このサイトについてのGitHub は次のページにありますので、気になった方はこちらのリポジトリをぜひフォークしてみて動かしてみてください。

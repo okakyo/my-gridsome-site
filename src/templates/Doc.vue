@@ -3,11 +3,12 @@
     v-container
       v-layout(row wrap).ma-2
         v-flex.ma-3.white(xs12 md10 lg8)
-          h2.blog-title.pa-2 {{ $page.doc.title }}
+          h2#document-title.blog-title.pa-2 {{ $page.doc.title }}
           v-divider
           .markdown(v-html="$page.doc.content")
         v-flex.ma-3(md1 lg3)
           right-sidebar
+        v-btn(color="error")(fab bottom right fixed)
 
      
 </template>

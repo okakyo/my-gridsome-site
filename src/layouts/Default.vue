@@ -4,7 +4,7 @@
       headers
       v-content.grey.lighten-4
         slot
-            
+
 </template>
 
 <static-query>

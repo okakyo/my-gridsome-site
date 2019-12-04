@@ -1,10 +1,17 @@
 <template lang="pug">
-    v-list(dense nav link)
-        v-list-item-title.ma-3 タグ一覧
-        v-divider
-        v-list-item-group
-            v-list-item(:to="'/blog/'+node.tag" v-for="{node} in $static.allDoc.edges")
+    .right-sidebar
+        v-list(dense nav link)
+            v-list-item-title.mx-1 タグ一覧
+            v-divider.mb-4.mt-1
+            v-list-item.grey.lighten-3.text--white(:to="'/blog/'+node.tag" v-for="{node} in $static.allDoc.edges")
                 v-list-item-title {{node.tag}}
+        v-list(nav)
+            v-list-item-title.mx-1 最新記事
+            v-divider
+            v-list-item(three-line)
+                v-list-item-title  例題１
+            v-divider.mx-4
+
 
 </template>
 

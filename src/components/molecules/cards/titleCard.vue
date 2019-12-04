@@ -7,14 +7,15 @@
                     outlined :href="card.path"
                     :elevation="hover? 5: 0"
                 )
-                    
-                    v-flex(xs4)
-                        v-img(:src="card.img")
-                    v-flex(xs8)
-                        v-card-text
-                            v-card-title.justify-center
-                                h2 {{card.title}}
-                            v-chip.mb-2(outlined) {{ card.tag}}
+                    v-container
+                        v-layout
+                            v-flex(xs4)
+                                v-img(height="100" width="100" :src="card.thumbnail")
+                            v-flex(xs8)
+                                v-card-text
+                                    v-card-title.justify-center
+                                        h2 {{card.title}}
+                                    v-chip.mb-2(outlined) {{ card.tag}}
                                 
                     v-divider
                     v-card-subtitle {{card.date |moment}} 更新

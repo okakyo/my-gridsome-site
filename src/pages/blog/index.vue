@@ -24,6 +24,7 @@ query {
                 path 
                 date
                 tag
+                thumbnail
             }
         }
     }

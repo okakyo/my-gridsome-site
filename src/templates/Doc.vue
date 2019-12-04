@@ -9,6 +9,7 @@
         v-flex.ma-3(md1 lg3)
           right-sidebar
         v-btn(color="error")(fab bottom right fixed)
+            v-icon(large) mdi-chevron-up
 
      
 </template>

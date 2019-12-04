@@ -24,9 +24,6 @@ query {
                 path 
                 date
                 tag
-
-
-
             }
         }
     }

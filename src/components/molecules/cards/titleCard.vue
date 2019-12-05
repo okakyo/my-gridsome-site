@@ -8,15 +8,14 @@
                     :elevation="hover? 5: 0"
                 )
                     v-container
-                        v-layout
-                            v-flex(xs4)
-                                v-img(height="100" width="100" :src="card.thumbnail")
+                        v-layout(row wrap)
+                            v-flex(xs4).pa-8
+                                v-img.ml-2(height="100%" width="100%" src="/noimage.png")
                             v-flex(xs8)
                                 v-card-text
                                     v-card-title.justify-center
                                         h2 {{card.title}}
-                                    v-chip.mb-2(outlined) {{ card.tag}}
-                                
+                                    v-chip.mb-2(outlined) {{card.tag}}
                     v-divider
                     v-card-subtitle {{card.date |moment}} 更新
 

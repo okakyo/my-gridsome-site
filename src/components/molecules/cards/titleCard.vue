@@ -10,7 +10,7 @@
                     v-container
                         v-layout(row wrap)
                             v-flex(xs4).pa-8
-                                v-img.ml-2(height="100%" width="100%" src="/noimage.png")
+                                v-img.ml-2(height="100%" width="100%" :src="card.thumbnail")
                             v-flex(xs8)
                                 v-card-text
                                     v-card-title.justify-center

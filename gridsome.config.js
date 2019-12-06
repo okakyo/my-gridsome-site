@@ -7,7 +7,8 @@
 module.exports = {
   siteName: 'Gridsome',
   template:{
-    Doc: '/blog/:slugs/:tag',
+    Doc: '/blog/:slugs',
+
   },
   
   transformers: {
@@ -34,8 +35,9 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'blog/**/*.md',
-        route: "/blog/:slugs",
+        route: "/blog/article/:slugs",
         typeName: 'Doc',
+
         remark: {
           plugins: [
             '@gridsome/remark-prismjs'

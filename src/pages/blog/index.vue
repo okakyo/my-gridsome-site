@@ -23,7 +23,7 @@ query {
                 title
                 path 
                 date
-                tag
+                tags
                 thumbnail
             }
         }

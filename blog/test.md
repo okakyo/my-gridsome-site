@@ -1,7 +1,6 @@
 ---
 title: Gridsome で ブログを制作した話
-tags:
-  - プログラミング
+tag: プログラミング
 slugs: gridsome-blog
 thumbnail: /uploads/coffee-2737047_640.jpg
 date: 2019-11-26T20:15:41.251Z

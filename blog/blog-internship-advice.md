@@ -1,7 +1,6 @@
 ---
 title: エンジニア職インターンシップ選考に対してのアドバイス
-tags:
-  - インターンシップ
+tag: インターンシップ
 slugs: internship-advice
 thumbnail: /uploads/interview-1018333_640.png
 date: 2019-11-30T04:52:54.681Z

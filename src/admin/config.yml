@@ -16,7 +16,7 @@ collections:
     identifier_field: title
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tag", widget: "string"}
       - {label: "Slug", name: "slugs", widget: "string"}
       - {label: "img", name: "thumbnail",widget: "image"}
       - {label: "Publish Date", name: "date", widget: "date"}

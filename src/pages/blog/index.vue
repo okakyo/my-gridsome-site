@@ -23,8 +23,11 @@ query {
                 title
                 path 
                 date
-                tag
                 thumbnail
+                tags {
+                    id
+                    path
+                }
             }
         }
     }

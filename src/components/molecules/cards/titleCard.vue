@@ -15,7 +15,9 @@
                                 v-card-text
                                     v-card-title.justify-center
                                         h2 {{card.title}}
-                                    v-chip.mb-2(outlined) {{card.tag}}
+                                        
+                                    v-chip-group(column multiple )
+                                        v-chip.mb-2(outlined v-for="tag in card.tags" :key="card.tags.id") {{tag.id}}
                     v-divider
                     v-card-subtitle {{card.date |moment}} 更新
 

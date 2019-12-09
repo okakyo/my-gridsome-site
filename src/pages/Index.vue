@@ -17,9 +17,7 @@
           works-card
           
 </template>
-<static-query>
 
-</static-query>
 <script>
 
 

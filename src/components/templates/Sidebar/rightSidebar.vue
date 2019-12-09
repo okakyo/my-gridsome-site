@@ -3,9 +3,9 @@
         v-list(dense nav link flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white タグ一覧
-            v-list-item-group(v-for="{node} in $static.tagAll.edges" :key="node.tag")
-                v-list-item(:to="'/blog/tags/'+node.tag" flat)
-                    v-list-item-title {{node.tag}}
+            v-list-item-group(v-for="{node} in $static.tagAll.edges" :key="node.tags")
+                v-list-item(:to="tag.path" v-for="tag in node.tags" flat)
+                    v-list-item-title {{tag.id}}
                     v-list-item-icon
                         v-icon(color="primary lighten-1") mdi-chevron-right
                 v-divider
@@ -26,7 +26,10 @@
         tagAll:allDoc {
             edges {
                 node {
-                    tag
+                    tags {
+                        id 
+                        path
+                    }
                 }
             }
         }

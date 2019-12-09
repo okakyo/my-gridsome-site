@@ -37,7 +37,13 @@ module.exports = {
         path: 'blog/**/*.md',
         route: "/blog/article/:slugs",
         typeName: 'Doc',
-
+        refs: {
+          tags: {
+            typeName: "Tag",
+            route: "/tag/:id",
+            create: true
+          }
+        },
         remark: {
           plugins: [
             '@gridsome/remark-prismjs'

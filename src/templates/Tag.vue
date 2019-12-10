@@ -16,7 +16,7 @@
 
 </template>
 <page-query>
-query($id: String!) {
+query($id: ID!) {
     tag(id:$id){
         belongsTo {
             edges {

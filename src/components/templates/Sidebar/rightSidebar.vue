@@ -3,8 +3,9 @@
         v-list(dense nav link flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white タグ一覧
-            v-list-item-group(v-for="{node} in $static.tagAll.edges" :key="node.tags")
-                v-list-item(:to="tag.path" v-for="tag in node.tags" flat)
+            
+            v-list-item-group(v-for="tag in organizedTag" :key="tag.id")
+                v-list-item(:to="tag.path" flat)
                     v-list-item-title {{tag.id}}
                     v-list-item-icon
                         v-icon(color="primary lighten-1") mdi-chevron-right
@@ -46,10 +47,24 @@
 
 <script>
     import Vue from 'vue';
+import { func } from 'prop-types';
 
     export default {
-        name: "rightSidebar"
+        name: "rightSidebar",
+        computed:{
+            organizedTag(){
+                let responseArray=[]
+                const getAllTag=this.$static.tagAll.edges.map(e=>e.node).map(e=>{
+                    e.tags.forEach(element => {
+                       responseArray.push(element) 
+                    });
+                })
+                
+                return responseArray.filter((x,i,self)=>self.indexOf(x)===i);
+            }
+        }
     }
+
 </script>
 
 <style scoped>

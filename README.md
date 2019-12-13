@@ -47,6 +47,7 @@ plugins: [
 ]
 ```
 - タグ機能の実装について 
+先ほど作ったマークダウンの場所に次のコードを追加します。
  ```js
 plugins: [
     //[ 省略] 
@@ -57,6 +58,7 @@ plugins: [
         path: 'blog/**/*.md',
         route: "/blog/article/:slugs",
         typeName: 'Doc',
+        // これを追加 
         refs: {
           tags: {
             typeName: "Tag",
@@ -70,7 +72,7 @@ plugins: [
           ]
         }
       }
-    },
+    },]
 ```
 
 ## Deploy 

@@ -1,0 +1,53 @@
+
+
+<template lang="pug">
+    Layout
+        v-container.white
+            .pa-3
+                h1 ブログ記事
+                v-divider
+
+            v-layout(row ).ma-2
+                v-flex.ma-3(xs12 md8 )
+                    div(v-for="{node} in $static.allDoc.edges" :key="node.title")
+                        title-card.pa-2(:card="node")
+                v-flex.ma-3(md3)
+                    v-card.mt-2(outlined)
+                        v-card-text
+                            right-sidebar
+
+</template>
+<static-query>
+    query {
+    allDoc{
+    edges {
+    node {
+    title
+    path
+    date
+    thumbnail
+    tags {
+    id
+    path
+    }
+    }
+    }
+    }
+
+    }
+</static-query>
+<script>
+    import titleCard from '../components/molecules/cards/titleCard.vue'
+    import rightSidebar from '../components/templates/Sidebar/rightSidebar.vue'
+    export default {
+        name: 'blog',
+        components:{titleCard,rightSidebar},
+        metaInfo: {
+            title: 'Blog'
+        },
+    }
+</script>
+
+<style>
+
+</style>

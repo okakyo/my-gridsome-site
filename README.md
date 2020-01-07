@@ -25,7 +25,7 @@
 ## Development 
 - マークダウンを読み込めるようにするための設定
 
-gridsome.config.js にて "plugins　の設定を次のようにする。
+gridsome.config.js にて "plugins"　の設定を次のようにする。
 
 ```js
 
@@ -46,6 +46,8 @@ plugins: [
     }
 ]
 ```
+
+また、template ディレクトリ内二、
 - タグ機能の実装について 
 先ほど作ったマークダウンの場所に次のコードを追加します。
  ```js
@@ -58,7 +60,7 @@ plugins: [
         path: 'blog/**/*.md',
         route: "/blog/article/:slugs",
         typeName: 'Doc',
-        // これを追加 
+        // こちらを追加 
         refs: {
           tags: {
             typeName: "Tag",

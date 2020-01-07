@@ -2,13 +2,12 @@
     v-app-bar(
         :clipped-left="$vuetify.breakpoint.lgAndUp"
         app
-
         color="blue darken-3" dark)
         v-toolbar-title
             v-btn(color="primary" text to="/" )
                 h2.white--text.mr-2 Top
         v-spacer
-        v-toolbar-title.hidden-md-and-down(v-for="header in headersUrl" :key="header.title")
+        v-toolbar-title(v-for="header in headersUrl" :key="header.title")
             v-btn(color="primary" text :to="header.url")
                 h4.white--text.mr-2 {{header.title}}
 
@@ -20,7 +19,7 @@ export default {
    data() {
        return {
            headersUrl: [
-               {title:"blog",url:"/blog"}
+               {title:"Portfolio",url:"/portfolio"}
            ],
        };
     },

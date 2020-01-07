@@ -1,50 +1,52 @@
+
 <template lang="pug">
-  Layout() 
-    v-parallax(src="/portfolio.jpg")
-      v-row(justify="center" align="center")
-          h1 OkaKyo's Portfolio
-    v-container
-      v-layout.pa-2(row)
-        v-flex(xs12 md4 lg3)
-          profile-card
-        v-flex(xs12 md8 lg9)
-          career-card
-      v-layout.pa-2
-        v-flex(xs12)
-          ability-card
-      v-layout.pa-2
-        v-flex(xs12)
-          works-card
-          
+    Layout
+        v-container.white
+            .pa-3
+                h1 ブログ記事
+                v-divider
+
+            v-layout(row ).ma-2
+                v-flex.ma-3(xs12 md8 )
+                    div(v-for="{node} in $static.allDoc.edges" :key="node.title")
+                        title-card.pa-2(:card="node")
+                v-flex.ma-3(md3)
+                    v-card.mt-2(outlined)
+                        v-card-text
+                            right-sidebar
+
 </template>
+<static-query>
+    query {
+        allDoc{
+            edges {
+                node {
+                    title
+                    path
+                    date
+                    thumbnail
+                    tags {
+                        id
+                        path
+                    }
+                }
+            }
+        }
 
+    }
+</static-query>
 <script>
-
-
-import cardContent from '../components/organisms/content/cardContent.vue'
-import profileCard from '../components/templates/cards/profileCard.vue'
-import careerCard from '../components/templates/cards/careerCard.vue'
-import abilityCard from '../components/templates/cards/abilityCard.vue'
-import worksCard from '../components/templates/cards/worksCard.vue'
-export default {
-  metaInfo: {
-    title: 'Portfolio'
-  },
-  components:{
-    
-    profileCard,
-    careerCard,
-    abilityCard,
-    worksCard,
-  }
-  
-
-
-}
+    import titleCard from '../components/molecules/cards/titleCard.vue'
+    import rightSidebar from '../components/templates/Sidebar/rightSidebar.vue'
+    export default {
+        name: 'blog',
+        components:{titleCard,rightSidebar},
+        metaInfo: {
+            title: 'Blog'
+        },
+    }
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
-}
+
 </style>

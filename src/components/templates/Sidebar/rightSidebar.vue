@@ -5,11 +5,13 @@
                 h3.text--white タグ一覧
             
             v-list-item-group(v-for="tag in organizedTag" :key="tag.id")
-                v-list-item(:to="tag.path" flat)
-                    v-list-item-title {{tag.id}}
+                v-list-item(:to="/tag/+tag" flat)
+                    v-list-item-title {{tag}}
                     v-list-item-icon
                         v-icon(color="primary lighten-1") mdi-chevron-right
                 v-divider
+            v-list-item(to="/" flat)
+               v-list-item-title.text--primary その他
         v-list(nav flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white 最新記事
@@ -53,14 +55,22 @@ import { func } from 'prop-types';
         name: "rightSidebar",
         computed:{
             organizedTag(){
-                let responseArray=[]
-                const getAllTag=this.$static.tagAll.edges.map(e=>e.node).map(e=>{
-                    e.tags.forEach(element => {
-                       responseArray.push(element) 
+                let  responseArray=[];
+                this.$static.tagAll.edges
+                    .map(e=>e.node)
+                    .map(e=>e.tags)
+                    .map(e=>{
+                         e.forEach(x=>{
+                             responseArray.push(x.id);
+                         })
                     });
-                })
-                
-                return responseArray.filter((x,i,self)=>self.indexOf(x)===i);
+
+                return responseArray.filter((e,x,self)=>{
+                        return self.indexOf(e)===x;
+                    }).slice(0,5);
+
+
+
             }
         }
     }

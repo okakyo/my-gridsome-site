@@ -1,17 +1,9 @@
 <template lang="pug">
-  Layout
-    v-container
-      v-layout(row wrap).ma-2
-        v-flex.ma-3.white(xs12 md10 lg8)
-          h2#document-title.blog-title.pa-2 {{ $page.doc.title }}
-          v-divider
-          .markdown(v-html="$page.doc.content")
-        v-flex.ma-3(md1 lg3)
-          right-sidebar
-        v-btn(color="error")(fab bottom right fixed)
-            v-icon(large) mdi-chevron-up
 
-     
+  blog-base(:blog-title="$page.doc.title")
+    template(v-slot:blogContent)
+      .markdown(v-html="$page.doc.content")
+
 </template>
 
 <page-query>
@@ -28,8 +20,10 @@ query Doc ($path: String!) {
 </page-query>
 <script>
 import rightSidebar from '../components/templates/Sidebar/rightSidebar.vue'
+import BlogBase from "../components/templates/blogBase";
 export default {
   components:{
+    BlogBase,
     rightSidebar
   },
   

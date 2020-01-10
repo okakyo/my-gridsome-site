@@ -16,9 +16,13 @@
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white 最新記事
             v-list-item-group(v-for="{node} in $static.recentTitleAll.edges" :key="node.title")
+                v-layout
+                    v-flex(xs3)
+                        v-list-item(three-line :to="node.path")
+                        p.mt-1  {{node.title}}
+                    v-flex(xs9)
+                        v-img(:src="node.thumbnail" width="100%" height="100%")
 
-                v-list-item(three-line :to="node.path")
-                    p.mt-1(style="text-align:center")  {{node.title}}
                 v-divider.pb-2
 
 
@@ -41,6 +45,8 @@
                 node {
                     title
                     path
+                    thumbnail
+                    date
                 }
             }
         }

@@ -1,5 +1,5 @@
 ---
-title: Docker 入門 :2
+title: Docker 入門 
 tags: 
   - docker 
 slugs: docker-starter-2

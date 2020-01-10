@@ -1,5 +1,5 @@
 ---
-title: Django 入門: テンプレートを利用しての構築
+title: Django 入門 テンプレートを利用しての構築
 tags: 
   - python
   - django

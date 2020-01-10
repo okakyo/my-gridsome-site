@@ -1,5 +1,5 @@
 ---
-title: Django 入門: 環境構築編 
+title: Django 入門 環境構築編 
 tags: 
   - python
   - django

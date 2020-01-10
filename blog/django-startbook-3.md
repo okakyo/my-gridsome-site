@@ -1,5 +1,5 @@
 ---
-title: Django 入門:3
+title: Django 入門: heroku へデプロイ編
 tags: 
   - python
   - django

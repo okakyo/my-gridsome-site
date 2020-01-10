@@ -19,10 +19,10 @@
                 v-layout
                     v-flex(xs8)
                         v-list-item(three-line :to="node.path")
-                            p.mt-1  {{node.title}}
+                            h4.mt-1  {{node.title}}
                     v-flex(xs4)
                         v-img.pa-5(:src="node.thumbnail" width="100%" height="100%")
-
+                p.text--secondary {{node.date | moment}} 日更新
                 v-divider.pb-2
 
 
@@ -77,6 +77,12 @@ import { func } from 'prop-types';
 
 
 
+            }
+        },
+        filters: {
+            moment: function (date) {
+                const datetime=new Date(date)
+                return `${datetime.getFullYear()}/${datetime.getMonth()+1}/${datetime.getDate()}`;
             }
         }
     }

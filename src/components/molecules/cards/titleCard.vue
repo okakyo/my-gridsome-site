@@ -43,7 +43,7 @@ export default Vue.extend({
     },
     filters: {
         moment: function (date) {
-            const datetime=new Date(date)
+            const datetime=new Date(date);
             return `${datetime.getFullYear()}/${datetime.getMonth()+1}/${datetime.getDate()}`;
         }
     }

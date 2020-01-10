@@ -17,11 +17,11 @@
                 h3.text--white 最新記事
             v-list-item-group(v-for="{node} in $static.recentTitleAll.edges" :key="node.title")
                 v-layout
-                    v-flex(xs3)
+                    v-flex(xs8)
                         v-list-item(three-line :to="node.path")
-                        p.mt-1  {{node.title}}
-                    v-flex(xs9)
-                        v-img(:src="node.thumbnail" width="100%" height="100%")
+                            p.mt-1  {{node.title}}
+                    v-flex(xs4)
+                        v-img.pa-5(:src="node.thumbnail" width="100%" height="100%")
 
                 v-divider.pb-2
 

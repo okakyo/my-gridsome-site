@@ -5,9 +5,9 @@
                 h1.text-center {{blogTitle}}
                 v-divider
             v-layout(row wrap).ma-2
-                v-flex.ma-3(xs12 md8)
+                v-flex.pa-3(xs12 md8)
                     slot(name="blogContent")
-                v-flex.ma-3(md3)
+                v-flex.pa-3(md4)
                     v-card.mt-2(outlined)
                         v-card-text
                             right-sidebar

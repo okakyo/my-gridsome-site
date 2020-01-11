@@ -13,16 +13,16 @@ date: 2020-1-10T04:52:54.681Z
 ```bash
 .
 .
-├-- api
+├── api
 |   ├── Dockerfile
-|   ├-- node_modules
-|   ├-- src
-|   |    └-- main.js 
-|   ├-- .dockerignore
+|   ├──  node_modules
+|   ├──  src
+|   |    └── main.js 
+|   ├──  .dockerignore
 |   ├── package-lock.json
 |   └── package.json
 |
-└─--docker-compose.yaml
+└──docker-compose.yaml
 
 ```
 

@@ -51,7 +51,7 @@ module.exports = {
           },
           '/':{
             changefreq:'monthly',
-            priority: 0.1
+            priority: 0.7
           },
         }
       }

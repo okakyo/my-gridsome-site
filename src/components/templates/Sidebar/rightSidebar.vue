@@ -10,8 +10,8 @@
                     v-list-item-icon
                         v-icon(color="primary lighten-1") mdi-chevron-right
                 v-divider
-            v-list-item(to="/" flat)
-               v-list-item-title.text--primary その他
+            v-list-item.mt-3(flat)
+               v-btn(outlined to="/" width="100%") その他
         v-list(nav flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white 最新記事
@@ -24,6 +24,8 @@
                         v-img.pa-5(:src="node.thumbnail" width="100%" height="100%")
                 p.text--secondary {{node.date | moment}} 日更新
                 v-divider.pb-2
+            v-list-item.mt-3(flat)
+                v-btn(outlined to="/" width="100%") その他
 
 
 </template>

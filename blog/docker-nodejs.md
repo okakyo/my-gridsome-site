@@ -1,45 +1,50 @@
 ---
 title: Dockerfile にBcrypt を 導入する方法
-tags: 
+tags:
   - docker
-  - node.js 
+  - node.js
 slugs: nodejs-bcrypt
 thumbnail: /uploads/interview-1018333_640.png
-date: 2020-1-10T04:52:54.681Z
+date: 2020-01-10T04:52:54.681Z
 ---
+この記事では、Dockerfile にBcrypt を導入する方法について書いて行きたいと考えています。 このとき、 ファイルのディレクトリ構造としては次のようになっています。
 
-この記事では、Dockerfile にBcrypt を導入する方法について書いて行きたいと考えています。
-このとき、 ファイルのディレクトリ構造としては次のようになっています。
 ```bash
+
 .
-├── api
+├-- api
 |   ├── Dockerfile
-|   ├──  node_modules
-|   ├──  src
-|   |    └── main.js 
-|   ├──  .dockerignore
+|   ├-- node_modules
+|   ├-- src
+|   |    └-- main.js 
+|   ├-- .dockerignore
 |   ├── package-lock.json
 |   └── package.json
 |
-└──docker-compose.yaml
-
+└─--docker-compose.yaml
 ```
 
-## 直面した課題とその要因
+## 直面した課題
+
 Node.js をDocker 上で構築しようとした際、次のようなエラーが出てしまい環境構築することができないという課題がありました。
 
-その要因として、Docker コンテナとローカルとで、node_modules を同期したときに発生しているようです。
-解決するには、コンテナとローカルとのnode_modules を分離して開発することです。
+## エラー要因
+
+Docker コンテナとローカルとで、node_modules を同期したときに発生しているようです。 解決するには、コンテナとローカルとのnode_modules を分離して開発することです。
+
 ## 解決方法
+
 node_modules を同期させないようにするには、まず.dockerignore を設定します。
-- .dockerignore
+
+* .dockerignore
 
 ```
 node_modules
 ```
-- Dockerfile
-```Dockerfile
 
+* Dockerfile
+
+```Dockerfile
 FROM node:13.0.1-alpine 
 
 RUN apk add --no-cache python make g++ gcc 
@@ -51,11 +56,12 @@ COPY package.json /api/package.json
 WORKDIR /api
 
 RUN npm ci
-
 ```
+
 最後に、docker-compose.yaml を次のように書いて行きます。
 
-- docker-compose.yaml
+* docker-compose.yaml
+
 ```yaml
 version: "3.0"
 services:
@@ -71,11 +77,12 @@ services:
 ```
 
 以上のように設定したのち, 親ディレクトリにて、
+
 ```
 docker-compose build
 docker-compose up
 ```
+
 として実行します。
 
 このようにすれば、Docker 上で、Bcrypt をインストールすることができます。
-

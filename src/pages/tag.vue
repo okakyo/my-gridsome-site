@@ -1,6 +1,6 @@
 <template lang="pug">
     blog-base
-ZZ
+
 </template>
 
 <script>

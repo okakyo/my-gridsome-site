@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Gridsome',
+  siteUrl: 'https://okakyo.myvnc.com',
   template:{
     Doc: '/blog/:slugs',
 
@@ -28,6 +29,19 @@ module.exports = {
       use: `gridsome-plugin-netlify-cms`,
       options: {
         publicPath: `/admin`
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: [],
+        config: {
+          '/posts/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+        }
       }
     },
     

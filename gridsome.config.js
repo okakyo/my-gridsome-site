@@ -37,9 +37,21 @@ module.exports = {
         cacheTime: 600000, // default
         exclude: [],
         config: {
-          '/posts/*': {
+          '/blog/*': {
             changefreq: 'weekly',
             priority: 0.5
+          },
+          '/tag/*':{
+            changefreq: 'weekly',
+            priority: 0.4
+          },
+          '/article/*':{
+            changefreq: 'weekly',
+            priority: 0.6
+          },
+          '/':{
+            changefreq:'monthly',
+            priority: 0.1
           },
         }
       }

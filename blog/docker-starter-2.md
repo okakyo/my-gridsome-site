@@ -2,7 +2,7 @@
 title: Docker 構築する上で気をつけること
 tags: 
   - docker 
-  - nodejs 
+  - node.js 
 slugs: docker-starter-2
 thumbnail: /uploads/interview-1018333_640.png
 date: 2019-11-30T04:52:54.681Z

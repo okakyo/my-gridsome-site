@@ -1,6 +1,7 @@
 <template lang="pug">
 
-  blog-base(:blog-title="$page.doc.title")
+  blog-base(:blog-title="$page.doc.title" :blogPath="blogPath")
+
     template(v-slot:blogContent)
       v-img.pa-9(width="100%" :src="$page.doc.thumbnail" )
       .markdown(v-html="$page.doc.content")
@@ -28,6 +29,23 @@ export default {
     BlogBase,
     rightSidebar
   },
+  data() {
+    return {
+
+      blogPath:[
+        {
+          text: 'Home',
+
+          href: '/',
+        },
+        {
+          text: 'Blog',
+          href: '/blog',
+        },
+
+      ]
+    }
+  },
 
   
   metaInfo() {
@@ -37,7 +55,9 @@ export default {
         { key: 'description', name: 'description', content: this.$page.doc.description }
       ]
     }
-  }
+  },
+
+
 }
 </script>
 <style>

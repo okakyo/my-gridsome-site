@@ -2,6 +2,7 @@
 
   blog-base(:blog-title="$page.doc.title")
     template(v-slot:blogContent)
+      v-img.pa-9(width="100%" :src="$page.doc.thumbnail" )
       .markdown(v-html="$page.doc.content")
 
 </template>
@@ -11,7 +12,8 @@ query Doc ($path: String!) {
   doc: doc (path: $path) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    thumbnail
+    date (format: "D. MM YYYY")
     timeToRead
     content
   }
@@ -26,6 +28,7 @@ export default {
     BlogBase,
     rightSidebar
   },
+
   
   metaInfo() {
     return {

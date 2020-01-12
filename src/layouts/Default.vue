@@ -4,8 +4,8 @@
       headers
       v-content.grey.lighten-4
         slot
-      v-footer
-        h5 Copyright
+        v-footer
+          h5 Copyright
 
 </template>
 

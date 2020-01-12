@@ -1,18 +1,8 @@
 <template lang="pug">
-    Layout
-        v-container.white
-            .pa-3
-                h1 ブログ記事
-                v-divider
-
-            v-layout(row ).ma-2
-                v-flex.ma-3(xs12 md8 )
-                    div(v-for="article  in articles" :key="article.title")
-                        title-card.pa-2(:card="article")
-                v-flex.ma-3(md3)
-                    v-card.mt-2(outlined)
-                        v-card-text
-                            right-sidebar
+    blog-base
+        template(v-slot:blogContent)
+            div(v-for="article  in articles" :key="article.title")
+                title-card.pa-2(:card="article")
 
 </template>
 <page-query>
@@ -40,9 +30,10 @@ query($id: ID!) {
 <script>
 import titleCard from '~/components/molecules/cards/titleCard.vue'
 import rightSidebar from '~/components/templates/Sidebar/rightSidebar.vue'
+import BlogBase from "../components/templates/blogBase";
 export default {
     name: 'blog',
-    components:{titleCard,rightSidebar},
+    components:{BlogBase, titleCard,rightSidebar},
     metaInfo: {
         title: 'Blog'
     },

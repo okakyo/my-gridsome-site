@@ -4,7 +4,7 @@ tags:
   - 初心者向け 
   - GitHub  
 slugs: github-starter 
-thumbnail: /uploads/interview-1018333_640.png
+thumbnail: /uploads/chairs-2181980_640.jpg 
 date: 2019-11-30T04:52:54.681Z
 ---
 

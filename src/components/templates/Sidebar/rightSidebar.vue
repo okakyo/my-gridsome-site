@@ -21,7 +21,7 @@
                         v-list-item(three-line :to="node.path")
                             h4.mt-1  {{node.title}}
                     v-flex(xs4)
-                        v-img.pa-5(:src="node.thumbnail" width="100%" height="100%")
+                        v-img(:src="node.thumbnail" width="100%" )
                 p.text--secondary {{node.date | moment}} 日更新
                 v-divider.pb-2
             v-list-item.mt-3(flat)

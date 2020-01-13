@@ -65,7 +65,7 @@ module.exports = {
         typeName: 'Doc',
         refs: {
           tags: {
-            typeName: "Tag",
+            typeName: "tagPage",
             route: "/tag/:id",
             create: true
           }

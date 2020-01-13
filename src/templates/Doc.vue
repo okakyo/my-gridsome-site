@@ -3,8 +3,12 @@
   blog-base(:blog-title="$page.doc.title" :blogPath="blogPath")
 
     template(v-slot:blogContent)
-      v-img.pa-9(width="100%" :src="$page.doc.thumbnail" )
+
+      .pa-9
+        v-img.pa-9(width="100%" :src="$page.doc.thumbnail" )
+      v-divider
       .markdown(v-html="$page.doc.content")
+
 
 </template>
 
@@ -35,7 +39,6 @@ export default {
       blogPath:[
         {
           text: 'Home',
-
           href: '/',
         },
         {
@@ -45,6 +48,9 @@ export default {
 
       ]
     }
+  },
+  mounted(){
+    this.blogPath.push({text:this.$page.doc.title,href:this.$route.path})
   },
 
   

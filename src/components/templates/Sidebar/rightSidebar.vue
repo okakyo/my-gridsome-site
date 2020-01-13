@@ -11,7 +11,7 @@
                         v-icon(color="primary lighten-1") mdi-chevron-right
                 v-divider
             v-list-item.mt-3(flat)
-               v-btn(outlined to="/" width="100%") その他
+               v-btn(outlined to="/tag" width="100%") その他
         v-list(nav flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white 最新記事
@@ -19,7 +19,7 @@
                 v-layout
                     v-flex(xs8)
                         v-list-item(three-line :to="node.path")
-                            h4.mt-1  {{node.title}}
+                            h4  {{node.title}}
                     v-flex(xs4)
                         v-img(:src="node.thumbnail" width="100%" )
                 p.text--secondary {{node.date | moment}} 日更新

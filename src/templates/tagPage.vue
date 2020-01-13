@@ -1,13 +1,14 @@
 <template lang="pug">
-    blog-base
+    blog-base(blog-title="の一覧")
         template(v-slot:blogContent)
+
             div(v-for="article  in articles" :key="article.title")
                 title-card.pa-2(:card="article")
 
 </template>
 <page-query>
 query($id: ID!) {
-    tag(id:$id){
+    tagPage(id:$id){
         belongsTo {
             edges {
                 node {
@@ -29,17 +30,16 @@ query($id: ID!) {
 </page-query>
 <script>
 import titleCard from '~/components/molecules/cards/titleCard.vue'
-import rightSidebar from '~/components/templates/Sidebar/rightSidebar.vue'
 import BlogBase from "../components/templates/blogBase";
 export default {
     name: 'blog',
-    components:{BlogBase, titleCard,rightSidebar},
+    components:{BlogBase, titleCard},
     metaInfo: {
         title: 'Blog'
     },
     computed:{
         articles(){
-             return this.$page.tag.belongsTo.edges.map(e => e.node);
+             return this.$page.tagPage.belongsTo.edges.map(e => e.node);
         }
     }
 }

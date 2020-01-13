@@ -66,7 +66,7 @@ RUN npm ci
 version: "3.0"
 services:
   api:
-    image: "<dockerhub-account>/express-base"
+    image: "<dockerhub-account>/express-api"
     restart: always
     build: ./api
     container_name: "api_of_startweb"
@@ -76,6 +76,7 @@ services:
       - ./api:/api
 ```
 
+<docker-hub-account> には、 DockerHub のアカウント名を入力してください。 
 以上のように設定したのち, 親ディレクトリにて、
 
 ```
@@ -85,4 +86,4 @@ docker-compose up
 
 として実行します。
 
-このようにすれば、Docker 上で、Bcrypt をインストールすることができます。
+このようにすれば、Docker 上で、Node.js, Bcrypt をインストールすることができます。

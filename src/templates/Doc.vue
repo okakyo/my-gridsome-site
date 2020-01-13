@@ -7,6 +7,7 @@
       .pa-9
         v-img.pa-9(width="100%" :src="$page.doc.thumbnail" )
       v-divider
+      p.description {{$page.doc.description}}
       .markdown(v-html="$page.doc.content")
 
 
@@ -17,7 +18,7 @@ query Doc ($path: String!) {
   doc: doc (path: $path) {
     title
     path
-
+    description
     thumbnail
     date (format: "D. MM YYYY")
     timeToRead
@@ -68,12 +69,15 @@ export default {
 }
 </script>
 <style>
-.blog-title {
-  text-align: center;
-  margin: 0.5rem;
+.description {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  line-height: 2em;
 }
 .markdown{
   padding: 5%;
+  padding-top: 3%;
 }
 .markdown p {
   line-height: 2em;

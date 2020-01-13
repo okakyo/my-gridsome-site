@@ -4,6 +4,8 @@ tags:
   - 初心者向け 
   - GitHub  
 slugs: github-starter 
+description: >-
+  こんにちは、おかきょーです。今回は、Git をプログラミング以外の場面でより有効に使うにはどう言った方法があるかについて紹介して行きたいと思います。
 thumbnail: /uploads/chairs-2181980_640.jpg 
 date: 2019-1-12T04:52:54.681Z
 ---

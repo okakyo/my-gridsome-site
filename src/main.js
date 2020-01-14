@@ -9,7 +9,11 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 export default function (Vue, { router, head, isClient,appOptions }) {
 
-  Vue.use(Vuetify)
+  Vue.use(Vuetify);
+  head.meta.push({
+    name: "description",
+    content:"This site was made in 2020",
+  });
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/icon?family=Material+Icons'

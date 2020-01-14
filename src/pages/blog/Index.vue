@@ -25,6 +25,7 @@
                     title
                     path
                     date
+                    description
                     thumbnail
                     tags {
                         id

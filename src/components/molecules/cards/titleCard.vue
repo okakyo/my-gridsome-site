@@ -14,7 +14,7 @@
                                 v-card-text
                                     v-card-title.justify-center
                                         h2 {{card.title}}
-                                        
+                                    v-card-subtitle {{card.description}}
                                     v-chip-group(column multiple )
                                         v-chip.mb-2(outlined v-for="tag in card.tags" :key="card.tags.id") {{tag.id}}
                     v-divider

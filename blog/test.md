@@ -1,13 +1,13 @@
 ---
-title: Gridsome で ブログを制作した話
+title: Gridsome で ブログを制作した話  
 tags: 
   - プログラミング
   - JavaScript
   - Vue.js
-slugs: gridsome-blog
+slugs: gridsome-blog  
 description: >-
-  こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。このサイトについてのGitHub は次のページにありますので、気になった方はこちらのリポジトリをぜひフォークしてみて動かしてみてください。
-thumbnail: /uploads/coffee-2737047_640.jpg
+  こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。このサイトについてのGitHub は次のページにありますので、気になった方はこちらのリポジトリをぜひフォークしてみて動かしてみてください。  
+thumbnail: /uploads/coffee-2737047_640.jpg  
 date: 2019-11-26T20:15:41.251Z
 ---
 
@@ -15,8 +15,6 @@ date: 2019-11-26T20:15:41.251Z
 Gridsome は、Vue.js をベースした静的サイト構築するためのフレームワークです。
 
 これまでのVue.js を利用してのブログサイトを公開するのであれば、AWS(Amazon Web Service) や GCP(Google Cloud Platform )などのSQL が用意されているサーバーを借りてブログサイトを運用する必要があります.
-
-
 
 ## 事前準備
 

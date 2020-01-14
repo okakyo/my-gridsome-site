@@ -62,10 +62,10 @@ export default {
       meta: [
         {name: 'twitter:card', content:"summary" },
         {name: 'twitter:site', content:"おかきょー" },
-        {name: 'og:url', content:`https://okakyo-myvnc.com${this.$page.doc.path}` },
+        {name: 'og:url', content:`https://okakyo.myvnc.com${this.$page.doc.path}` },
         {name: 'og:title', content:this.$page.doc.title },
         {name: 'og:description', content: this.$page.doc.description },
-        {name: "og:image", content: `https://okakyo-myvnc.com${this.$page.doc.thumbnail}` },
+        {name: "og:image", content: `https://okakyo.myvnc.com${this.$page.doc.thumbnail}` },
       ]
     }
   },

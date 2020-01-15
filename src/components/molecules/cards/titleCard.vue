@@ -16,7 +16,7 @@
                                         h2 {{card.title}}
                                     v-card-subtitle {{card.description}}
                                     v-chip-group(column multiple )
-                                        v-chip.mb-2(outlined v-for="tag in card.tags" :key="card.tags.id") {{tag.id}}
+                                        v-chip.mb-2(outlined v-for="tag in card.tags" :key="card.tags.id" ) {{tag.id}}
                     v-divider
                     v-card-subtitle {{card.date |moment}} 更新
 

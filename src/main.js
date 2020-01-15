@@ -11,7 +11,7 @@ export default function (Vue, { router, head, isClient,appOptions }) {
 
   Vue.use(Vuetify);
   head.meta.push({
-    name: "description",
+    name: "Description",
     content:"This site was made in 2020",
   });
   head.link.push({

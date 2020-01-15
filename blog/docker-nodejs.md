@@ -31,6 +31,19 @@ date: 2020-01-10T04:52:54.681Z
 
 Node.js をDocker 上で構築しようとした際、次のようなエラーが出てしまい環境構築することができないという課題がありました。
 
+```
+ Error: Error loading shared library /api/node_modules/bcrypt/lib/binding/bcrypt_lib.node: Exec format error
+bff_of_startweb |     at Object.Module._extensions..node (internal/modules/cjs/loader.js:1041:18)
+bff_of_startweb |     at Module.load (internal/modules/cjs/loader.js:822:32)
+bff_of_startweb |     at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+bff_of_startweb |     at Module.require (internal/modules/cjs/loader.js:864:19)
+bff_of_startweb |     at require (internal/modules/cjs/helpers.js:74:18)
+bff_of_startweb |     at Object.<anonymous> (/api/node_modules/bcrypt/bcrypt.js:6:16)
+bff_of_startweb |     at Module._compile (internal/modules/cjs/loader.js:971:30)
+bff_of_startweb |     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1011:10)
+bff_of_startweb |     at Module.load (internal/modules/cjs/loader.js:822:32)
+bff_of_startweb |     at Function.Module._load (internal/modules/cjs/loader.js:730:14)
+```
 ## エラー要因
 
 Docker コンテナとローカルとで、node_modules を同期したときに発生しているようです。 解決するには、コンテナとローカルとのnode_modules を分離して開発することです。

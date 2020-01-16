@@ -64,12 +64,7 @@
                 ]
             }
         },
-        computed:{
-
-        },
-        mounted(){
-            this.pageNow=this.$page.doc.pageInfo.currentPage;
-        },
+       
         metaInfo: {
             title: 'Blog'
         },

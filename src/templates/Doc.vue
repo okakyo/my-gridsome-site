@@ -1,12 +1,19 @@
 <template lang="pug">
 
-  blog-base(:blog-title="$page.doc.title" :blogPath="blogPath")
-
+  blog-base(:blogPath="blogPath" :chips="$page.doc.tags")
     template(v-slot:blogContent)
-
-      .pa-9
-        v-img.pa-9(width="100%" :src="$page.doc.thumbnail" )
-      v-divider
+      .pa-3#document-title
+        h1.mb-3.text-center {{$page.doc.title}}
+        v-divider
+      v-container
+        v-layout(justify-center )
+    
+      
+      .pa-8
+        v-container
+          v-layout(justify-center)
+            v-flex(xs8)
+              v-img(width="100%" :src="$page.doc.thumbnail" )
       p.description {{$page.doc.description}}
       .markdown(v-html="$page.doc.content")
 
@@ -18,6 +25,10 @@ query Doc ($path: String!) {
   doc: doc (path: $path) {
     title
     path
+    tags {
+      id
+      path
+    }
     description
     thumbnail
     date (format: "D. MM YYYY")
@@ -77,12 +88,13 @@ export default {
 .description {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 5%;
+  
   line-height: 2em;
 }
 .markdown{
   padding: 5%;
   padding-top: 3%;
+  
 }
 .markdown p {
   line-height: 2em;

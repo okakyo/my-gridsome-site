@@ -4,8 +4,10 @@
       headers
       v-content.grey.lighten-4
         slot
-        v-footer
-          h5 Copyright
+        v-footer(style="text-align:center").pa-3
+          v-container
+            v-layout(justify-center)
+              p Copyright ©︎2020 Oka Kyohei All Right Reserved
 
 </template>
 
@@ -40,5 +42,7 @@ export default {
 </script>
 
 <style>
-
+.layout {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Hiragino Kaku Gothic ProN,"メイリオ",meiryo,sans-serif
+}
 </style>

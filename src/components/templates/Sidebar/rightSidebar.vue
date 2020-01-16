@@ -3,15 +3,9 @@
         v-list(dense nav link flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white タグ一覧
+            v-chip-group(column)
+                v-chip(label outlined color="primary" small v-for="tag in organizedTag" :key="tag.id" :to="/tag/+tag") {{tag}}
             
-            v-list-item-group(v-for="tag in organizedTag" :key="tag.id")
-                v-list-item(:to="/tag/+tag" flat)
-                    v-list-item-title {{tag}}
-                    v-list-item-icon
-                        v-icon(color="primary lighten-1") mdi-chevron-right
-                v-divider
-            v-list-item.mt-3(flat)
-               v-btn(outlined to="/tag" width="100%") その他
         v-list(nav flat)
             v-list-item-title.grey.lighten-3.mb-3.pa-1
                 h3.text--white 最新記事
@@ -20,12 +14,11 @@
                     v-flex(xs8)
                         v-list-item(three-line :to="node.path")
                             h4  {{node.title}}
-                    v-flex(xs4)
+                    v-flex.mt-5(xs4)
                         v-img(:src="node.thumbnail" width="100%" )
                 p.text--secondary {{node.date | moment}} 日更新
                 v-divider.pb-2
-            v-list-item.mt-3(flat)
-                v-btn(outlined to="/" width="100%") その他
+            
 
 
 </template>
@@ -75,7 +68,7 @@ import { func } from 'prop-types';
 
                 return responseArray.filter((e,x,self)=>{
                         return self.indexOf(e)===x;
-                    }).slice(0,5);
+                    })
 
 
 

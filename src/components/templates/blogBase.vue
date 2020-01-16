@@ -1,8 +1,8 @@
 <template lang="pug">
     Layout
         v-container.white
-            .pa-3#document-title
-                h1.text-center {{blogTitle}}
+            .pa-3#document-title(v-if="blogTitle")
+                h1.mb-3.text-center {{blogTitle}}
                 v-divider
             v-breadcrumbs.ma-1(:items="blogPath" large)
                 template(v-slot:item="{ item }")
@@ -29,7 +29,7 @@
     import rightSidebar from '../templates/Sidebar/rightSidebar.vue'
     export default {
         name: "blogBase",
-        props:['blogTitle','blogContent','blogPath'],
+        props:['blogTitle','blogContent','blogPath',"chips","isBlog"],
 
         components:{titleCard,rightSidebar},
 

@@ -9,13 +9,16 @@
                     v-container
                         v-layout(row wrap)
                             v-flex(xs12 md5  lg4).pa-8
-                                v-img.ml-2(height="100%" width="100%" :src="card.thumbnail")
+                                v-img.ml-2(height="100%" width="100%" :src="card.thumbnail" )
                             v-flex(xs12 md7 lg8)
                                 v-card-text
-                                    v-card-title.justify-center
-                                        h2 {{card.title}}
-                                    v-card-subtitle {{card.description}}
-                                    v-chip-group(column multiple )
+                                    v-card-title.py-1 
+                                        h3 {{card.title}}
+                                    v-list(three-line)
+                                        v-list-item
+                                            v-list-item-content
+                                                v-list-item-subtitle {{card.description}}
+                                    v-chip-group(column multiple)
                                         v-chip.mb-2(outlined v-for="tag in card.tags" :key="card.tags.id" ) {{tag.id}}
                     v-divider
                     v-card-subtitle {{card.date |moment}} 更新

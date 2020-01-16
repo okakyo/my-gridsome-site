@@ -2,7 +2,7 @@
 <template lang="pug">
     blog-base(blog-title="ブログ一覧" :blogPath="blogPath" :page="$page.doc.pageInfo")
         template(v-slot:blogContent)
-
+            
             div(v-for="{node} in $page.doc.edges" :key="node.title")
                 title-card.pa-2(:card="node")
             Pager.v-pagination(:info="$page.doc.pageInfo" linkClass="v-pagination v-pagination__item")

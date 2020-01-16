@@ -6,9 +6,11 @@
         h1.mb-3.text-center {{$page.doc.title}}
         v-divider
       v-container
-        v-layout(justify-center )
-    
-      
+        v-layout(justify-center)
+          
+          v-btn.mx-3(v-for="button in shareButtons" :key="button.name" :color="button.color" fab outlined :href="button.url" rel="nofollow" target="_blank") 
+            v-icon {{button.icon}}
+            
       .pa-8
         v-container
           v-layout(justify-center)
@@ -48,7 +50,6 @@ export default {
   },
   data() {
     return {
-
       blogPath:[
         {
           text: 'Home',
@@ -59,11 +60,45 @@ export default {
           href: '/blog',
         },
 
+      ],
+      shareButtons: [
+        {
+          name:"twitter",
+          url:`https://twitter.com/share?url=https://okakyo.myvnc.com${this.$route.path}`,
+          icon:"mdi-twitter",
+          color:"info"
+        },
+        {
+          name:"facebook",
+          url:`https://www.facebook.com/share.php?u=https://okakyo.myvnc.com${this.$route.path}`,
+          icon:"mdi-facebook",
+          color:"primary"
+        },
+        {
+          name:"pocket",
+          url:`https://getpocket.com/edit?url=https://okakyo.myvnc.com${this.$route.path}`,
+          icon:"mdi-pocket",
+          color:"error"
+        },
+        {
+          name: "hatena",
+          url:`https://b.hatena.ne.jp/add?mode=confirm&url=https://okakyo.myvnc.com${this.$route.path}`,
+          icon:"mdi-google-plus",
+          color:"#EE4056"
+        },
       ]
     }
   },
   mounted(){
-    this.blogPath.push({text:this.$page.doc.title,href:this.$route.path})
+    this.blogPath.push({text:this.$page.doc.title,href:this.$route.path});
+    this.shareButtons.map(e=>{
+      if(e.name==="twitter"){
+        e.url+=`&text=${this.$page.doc.title}`
+        }
+      else if(e.name==="hatena"){
+        e.url+=`${this.$route.path}`
+      }
+    });
   },
 
   

@@ -8,7 +8,8 @@
       v-container
         v-layout(justify-center)
           v-btn.mx-3(fab outlined  v-for="button in shareButtons" :key="button.name" :color="button.color" :href="button.url" rel="nofollow" target="_blank") 
-            v-icon {{button.icon}}
+            v-icon(v-if="button.icon") {{button.icon}}
+            h2(v-else).fa-hatena
             
       .pa-8
         v-container
@@ -82,8 +83,9 @@ export default {
         {
           name: "hatena",
           url:`https://b.hatena.ne.jp/add?mode=confirm&url=https://okakyo.myvnc.com${this.$route.path}`,
-          icon:"mdi-google-plus",
-          color:"#EE4056"
+          
+          src:"/hatenabookmark-logomark.svg",
+          color:"info"
         },
       ]
     }
@@ -165,4 +167,12 @@ export default {
 
 }
 
+/* Font Awesome hatena bookmark */
+.fa-hatena:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5%;
+}
 </style>

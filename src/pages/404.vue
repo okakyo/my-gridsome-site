@@ -3,8 +3,8 @@
     v-container
       v-layout(justify-center)
         v-flex(xs8).text-center
-            h1 ブログサイト構築中
-            p 現在、 ブログの設定がまだ構築中であるため、未公開です。
+            h1 404: No URL Found 
+            p このURL は現在、設定されていません。URL パスをもう一度ご確認ください。
 
 </template>
 

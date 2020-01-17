@@ -6,7 +6,7 @@ tags:
 slugs: github-starter 
 description: >-
   こんにちは、おかきょーです。今回は、Git をプログラミング以外の場面でより有効に使うにはどう言った方法があるかについて紹介して行きたいと思います。
-thumbnail: /uploads/chairs-2181980_640.min.jpg 
+thumbnail: /uploads/chairs-2181980_640-min.jpg 
 date: 2020-1-12T04:52:54.681Z
 ---
 

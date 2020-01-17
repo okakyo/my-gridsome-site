@@ -5,7 +5,7 @@ tags:
   - django
 slugs: django-starter-1
 description: この記事では、Django  でアプリを公開するまでのチュートリアルについて書いて行きたいと思います。
-thumbnail: /uploads/accord-2119_640.min.jpg
+thumbnail: /uploads/accord-2119_640-min.jpg
 date: 2019-11-30T04:52:54.681Z
 ---
 ## Django とは

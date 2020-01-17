@@ -110,7 +110,7 @@ export default {
         {name: 'og:url', content:`https://okakyo.myvnc.com${this.$page.doc.path}` },
         {name: 'og:title', content:this.$page.doc.title },
         {name: 'og:description', content: this.$page.doc.description },
-        {name: "og:image", content: `https://okakyo.myvnc.com${this.$page.doc.thumbnail}` },
+        {name: "og:image", content: `https://okakyo.myvnc.com/IMG_1267.png` },
       ]
     }
   },

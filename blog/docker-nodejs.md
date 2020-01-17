@@ -7,7 +7,7 @@ slugs: nodejs-bcrypt
 description: >-
   この記事では、Dockerfile にBcrypt を導入する方法について書いて行きたいと考えています。
 
-thumbnail: /uploads/security-265130_640.jpg
+thumbnail: /uploads/security-265130_640.min.jpg
 date: 2020-01-10T04:52:54.681Z
 ---
  このとき、 ファイルのディレクトリ構造としては次のようになっています。

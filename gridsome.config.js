@@ -9,9 +9,7 @@ module.exports = {
   siteUrl: 'https://okakyo.myvnc.com',
   template:{
     Doc: '/blog/:slugs',
-
   },
-  
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

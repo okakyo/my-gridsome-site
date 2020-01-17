@@ -6,15 +6,15 @@ tags:
   - Vue.js
 slugs: gridsome-blog  
 description: >-
-  こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。このサイトについてのGitHub は次のページにありますので、気になった方はこちらのリポジトリをぜひフォークしてみて動かしてみてください。  
+  こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。Netlifyを利用して、無料でサイトを公開、運用する方法を書いて行きたいと思います。  
 thumbnail: /uploads/coffee-2737047_640.jpg  
 date: 2019-11-26T20:15:41.251Z
 ---
 
 ## Gridsome とは何か
-Gridsome は、Vue.js をベースした静的サイト構築するためのフレームワークです。
+Gridsome は、Vue.js をベースした静的サイトを構築するためのフレームワークです。
 
-これまでのVue.js を利用してのブログサイトを公開するのであれば、AWS(Amazon Web Service) や GCP(Google Cloud Platform )などのSQL が用意されているサーバーを借りてブログサイトを運用する必要があります.
+
 
 ## 事前準備
 
@@ -22,42 +22,71 @@ Gridsome は、Vue.js をベースした静的サイト構築するためのフ�
 
 今回のアプリを構築するにあたり、使用したライブラリは次の通りです。
 
-- Gridsome
-- Vuetify
-- Pug 
-- Netlify CMS etc... 
+- #### Gridsome
+- #### Vuetify
+- #### Pug 
+- #### Netlify CMS etc... 
 
-npm を利用して環境を構築して行きます。
+まず、npm を利用して環境を構築していきます。
 
 ``` bash
 npm install -g gridsome 
 ```
-次に、
-```sh
+インストールが完了したら、
+```bash
 gridsome create new-site 
 ```
-と入力して実行します。これにより、アプリを構築することができます。
+と入力して実行します。これにより、Gridsome の開発できる環境が整いました。
 
 ## Pug を有効にする
 
+私は、Vue で構築するにあたり、Pug が使えるように設定しています。
+Pug とは、AltHTML の一つの言語で、したの例のように、インテントによってHTML の要素を入れ子の状態に
+してくれるのが特徴です。
 
+例: HTML で実装した場合
+```html
+<div class="title-head">
+  <h1>
+    Hello World
+  </h1>
+</div>
+```
+例：Pugで実装した場合
+```pug
+.title-head
+  h1 Hello World
+```
+ 普通のHTMLと比べて、コードの量が少なくなるだけでなく、各要素が終わりであることを示すために、"</(要素名)>" を書く必要がないために修正し忘れにくくしてくれます。
 
-## マークダウン
+使えるようにするには、
+```bash 
+npm install -save-dev pug @gridsome/plugin-pug
+```
+とした上で、**gridsome.config.js** の **plugin** を次の文を書き足します。
+```
+plugins: [
+    'gridsome-plugin-pug',
+]
+```
+
+## Markdown でブログ記事を管理する
 このGridsome は、Markdown ファイルで記事の保存、GraphQL を通して記事の読み込みを行います。
 マークダウンを利用して記事を利用するために、次のライブラリをインストールします。
 
 
-```sh
+```bash
 npm install --save @gridsome/source-filesystem @gridsome/transformer-remark
 npm install --save-dev @gridsome/remark-prismjs
 ```
 
-そして、gridsome.config.js にて "plugins"　で次のように設定します。
+そして、gridsome.config.js にて **"plugins"**　で次のように設定します。
 
 ```js
 
 plugins: [
-    // [ 省略 ]
+    'gridsome-plugin-pug',
+    // 以下を追加
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -74,9 +103,10 @@ plugins: [
 ]
 ```
 
-この TypeName では、*templates ファイル* で設定した *Doc.vue* をもとにマークダウンが表示されます。
+この TypeName では、**templates ファイル** で設定した **Doc.vue** をもとにマークダウンが表示されます。
 
-```vue
+Doc.vue は次のように実装します。
+```pug
 <template lang="pug">
   Layout
     v-container
@@ -89,10 +119,7 @@ plugins: [
           right-sidebar
         v-btn(color="error")(fab bottom right fixed)
             v-icon(large) mdi-chevron-up
-
-     
 </template>
-
 <page-query>
 query Doc ($path: String!) {
   doc: doc (path: $path) {
@@ -127,14 +154,17 @@ export default {
 
 ```
 
-以上で、マークダウンファイルの読み込むことができます。
-
-
-
+以上の設定により、読み込んだ Markdown ファイルをブログ記事として公開することができるようになりました。
 
 ## Netlify CMS を追加する
 
-```sh
+記事を編集するにあたり、Git を利用して記事を管理することもできますが、今回はNetlify CMS を利用して記事編集ができるようにしたいと思います、
+
+Netlify CMS については次の記事を参照してください。
+
+このCMS が使えるようにするには、npm にて、次のコマンドを実行します。
+
+```bash
 npm install --save gridsome-plugin-netlify-cms
 ```
 
@@ -202,8 +232,7 @@ import CMS from "netlify-cms"
 
  ```js
 plugins: [
-    //[ 省略] 
-    
+    'gridsome-plugin-pug' 
     {
       use: '@gridsome/source-filesystem',
       options: {

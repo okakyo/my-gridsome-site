@@ -7,8 +7,7 @@
         v-divider
       v-container
         v-layout(justify-center)
-          
-          v-btn.mx-3(v-for="button in shareButtons" :key="button.name" :color="button.color" fab outlined :href="button.url" rel="nofollow" target="_blank") 
+          v-btn.mx-3(fab outlined  v-for="button in shareButtons" :key="button.name" :color="button.color" :href="button.url" rel="nofollow" target="_blank") 
             v-icon {{button.icon}}
             
       .pa-8

@@ -8,11 +8,41 @@ public_folder: "/uploads"
 publish_mode: editorial_workflow 
 
 collections:
+  - name: "web"
+    label: "Web"
+    folder: "web"
+    create: true
+    slug: "blog/web/{{fields.slugs}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tag", name: "tags", widget: "list"}
+      - {label: "Slug", name: "slugs", widget: "string"}
+      - {label: "description",name: "description", widget: "text"}
+      - {label: "img", name: "thumbnail",widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "data-science"
+    label: "Data Science"
+    folder: "data-science"
+    create: true
+    slug: "blog/data-science/{{fields.slugs}}"
+    identifier_field: title
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tag", name: "tags", widget: "list"}
+      - {label: "Slug", name: "slugs", widget: "string"}
+      - {label: "description",name: "description", widget: "text"}
+      - {label: "img", name: "thumbnail",widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Content", name: "body", widget: "markdown"}
+      
   - name: "blog"
     label: "Blogs"
     folder: "blog"
     create: true
-    slug: "blog/{{fields.slugs}}"
+    slug: "blog/programing/{{fields.slugs}}"
     identifier_field: title
     fields:
       - {label: "Title", name: "title", widget: "string"}

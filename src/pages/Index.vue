@@ -20,7 +20,6 @@
 
 <script>
 
-
     import cardContent from '../components/organisms/content/cardContent.vue'
     import profileCard from '../components/templates/cards/profileCard.vue'
     import careerCard from '../components/templates/cards/careerCard.vue'

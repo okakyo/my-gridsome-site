@@ -188,14 +188,6 @@ $curl localhost:8000/hello
 
 """
 ```
-## Router を分離して管理する
-
-アプリを大規模になり、CRUD に基づくアプリ設計を行う上でルーターを管理する必要があります。
-**APIRouter** を利用して、Router を各要素ごとに分離するしていきます。
-
-```python
-
-```
 
 ## Request, Response の取得
 
@@ -258,6 +250,7 @@ async def read_item(request: Request, id: str):
 
 ```
 
+- item.html
 ```html
 <html>
 <head>
@@ -269,7 +262,7 @@ async def read_item(request: Request, id: str):
 </body>
 </html>
 ```
-
+- styles.css
 ```css
 h1 {
     color: green;

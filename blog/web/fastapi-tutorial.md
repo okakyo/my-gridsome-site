@@ -9,20 +9,17 @@ thumbnail: /uploads/accord-2119_640-min.jpg
 date: 2020-1-18T04:52:54.681Z
 ---
 
-
-今回のGitHub の資料はこちらにあります。
-
 ## FastAPI とは
 FastAPI は、Django やFlask といったPython のWebフレームワークの一つです。
 
 ## FastAPI の特性
 - OpenAPI に基づいて、自動的にJSON Schema モデルを生成してくれます
   引数を定義する際に、型を定義にして型安全にすることができます
-- Python のASGI フレームワークである[Uvicorn]()により、
+- Python のASGI フレームワークである[Uvicorn](https://www.uvicorn.org/)により、
   Node.jsやGo言語並のパフォーマンスが利用できます
   (詳しくは、こちらを参照してください)
 
-- [Pydantic]() を利用して、モデルの型やバリデーションを定義することができます
+- [Pydantic](https://pydantic-docs.helpmanual.io/) を利用して、モデルの型やバリデーションを定義することができます
   API を定義すると、Swagger UI,Redoc によるドキュメントが自動生成されます
   
 - GraphQLやWebSocketも対応しています
@@ -129,7 +126,7 @@ $curl localhost:8000
 
 とJSON 形式のデータが返ってきます.
 
-このとき、生成されたドキュメントを確認するにはこちらです。https://localhost:8000/docs
+このとき、生成されたドキュメントを確認するにはこちらです。[https://localhost:8000/docs](https://localhost:8000/docs)
 
 ##  パス、クエリのパラメーターの取得
 次に, Path のパラメーターやクエリの値を取得するには、次のように取得します.
@@ -449,7 +446,7 @@ async def websocket_endpoint(
 
 
 ## 参考文献
-- [Fast API  公式ドキュメント]()
-- [Pydantic 入門]()
+- [Fast API  公式ドキュメント](https://fastapi.tiangolo.com/)
+- [Pydantic 入門](https://qiita.com/0622okakyo/items/d1dcb896621907f9002b)
 
 

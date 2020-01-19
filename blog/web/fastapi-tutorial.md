@@ -12,19 +12,18 @@ date: 2020-1-18T04:52:54.681Z
 ## FastAPI とは
 FastAPI は、Django やFlask といったPython のWebフレームワークの一つです。
 
-## FastAPI の特性
+このフレームワークには、次のような特徴があります。
 - OpenAPI に基づいて、自動的にJSON Schema モデルを生成してくれます
-  引数を定義する際に、型を定義にして型安全にすることができます
+
 - Python のASGI フレームワークである[Uvicorn](https://www.uvicorn.org/)により、
   Node.jsやGo言語並のパフォーマンスが利用できます
   (詳しくは、こちらを参照してください)
 
 - [Pydantic](https://pydantic-docs.helpmanual.io/) を利用して、モデルの型やバリデーションを定義することができます
-  API を定義すると、Swagger UI,Redoc によるドキュメントが自動生成されます
+ - API を定義すると、Swagger UI,Redoc によるドキュメントが自動生成されます
   
 - GraphQLやWebSocketも対応しています
 
-といったものがあります。
 
 
 ## 環境構築

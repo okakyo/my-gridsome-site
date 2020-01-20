@@ -5,10 +5,10 @@
         color="blue darken-3" dark)
         v-toolbar-title
             v-btn(color="primary" text to="/" )
-                h2.white--text.mr-2 Top
+                h4.white--text.mr-2 Top
         v-spacer
         v-toolbar-title 
-            h3 おかきょーのブログ
+            h4 おかきょーのブログ
         v-spacer
         v-toolbar-title(v-for="header in headersUrl" :key="header.title")
             v-btn(color="primary" text :to="header.url")

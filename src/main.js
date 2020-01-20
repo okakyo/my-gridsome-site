@@ -21,6 +21,9 @@ export default function (Vue, { router, head, isClient,appOptions }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css'
+  });
+  head.script.push({
+    src: "https://static.line-scdn.net/liff/edge/2.1/sdk.js",
   })
 
   // Set default layout as a global component

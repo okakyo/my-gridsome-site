@@ -30,11 +30,11 @@ Gridsome は、Vue.js で利用できる JAMStack フレームワークのひと
 まず、npm を利用して環境を構築していきます。
 
 ``` bash
-npm install -g gridsome 
+$ npm install -g gridsome 
 ```
 インストールが完了したら、
 ```bash
-gridsome create new-site 
+$ gridsome create new-site 
 ```
 と入力して実行します。これにより、Gridsome の開発できる環境が整いました。
 
@@ -63,7 +63,7 @@ Pug とは、AltHTML の一つの言語で、以下の例のように、イン�
 
 使えるようにするには、
 ```bash 
-npm install -save-dev pug @gridsome/plugin-pug
+$ npm install -save-dev pug @gridsome/plugin-pug
 ```
 とした上で、`gridsome.config.js` の **plugin** を次の文を書き足します。
 - gridsome.config.js
@@ -77,8 +77,8 @@ plugins: [
 
 まず、Vuetify ライブラリと、webpack を編集するライブラリををnpm からインストールします。
 ```bash
-$npm install --save vuetify 
-$npm install --save-dev webpack-node-externals
+$ npm install --save vuetify 
+$ npm install --save-dev webpack-node-externals
 ```
 
 続きまして、`/src/main.js` に次のように設定します。
@@ -152,8 +152,8 @@ module.exports = function (api) {
 
 
 ```bash
-$npm install --save @gridsome/source-filesystem @gridsome/transformer-remark
-$npm install --save-dev @gridsome/remark-prismjs
+$ npm install --save @gridsome/source-filesystem @gridsome/transformer-remark
+$ npm install --save-dev @gridsome/remark-prismjs
 ```
 
 そして、`gridsome.config.js` にて **plugins**　で次のように設定します。
@@ -243,7 +243,7 @@ Netlify CMS については次の記事を参照してください。
 このCMS が使えるようにするには、npm にて、次のコマンドを実行します。
 
 ```bash
-$npm install --save gridsome-plugin-netlify-cms
+$ npm install --save gridsome-plugin-netlify-cms
 ```
 
 CMS を有効にするには、src ファイルないに, admin ディレクトリを構築します。

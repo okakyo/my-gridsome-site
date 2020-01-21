@@ -70,7 +70,10 @@ module.exports = {
         },
         remark: {
           plugins: [
-            '@gridsome/remark-prismjs'
+            '@gridsome/remark-prismjs',
+            [ '@noxify/gridsome-plugin-remark-embed', {
+              'enabledProviders' : ['Youtube', 'Twitter', 'Gist'],
+          }]
           ]
         }
       }

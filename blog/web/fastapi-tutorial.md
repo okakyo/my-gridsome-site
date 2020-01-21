@@ -1,5 +1,5 @@
 ---
-title: FastAPI チュートリアル
+title: FastAPI 入門
 tags:
   - python
   - Fastapi
@@ -17,22 +17,20 @@ FastAPI は、Django やFlask といったPython のWebフレームワークの�
 
 - Python のASGI フレームワークである[Uvicorn](https://www.uvicorn.org/)により、
   Node.jsやGo言語並のパフォーマンスが利用できます
-  (詳しくは、こちらを参照してください)
 
 - [Pydantic](https://pydantic-docs.helpmanual.io/) を利用して、モデルの型やバリデーションを定義することができます
  - API を定義すると、Swagger UI,Redoc によるドキュメントが自動生成されます
   
 - GraphQLやWebSocketも対応しています
 
-
-
 ## 環境構築
 
 このFastAPI は、**Python のバージョンが3.6 以上**であるという条件があります。
 今回、Docker を利用しての環境構築を行っていきたいと思います。
 
-まず、**requirement.txt** を書いていきます。
+まず、`requirement.txt` を書いていきます。
 
+- requirement.txt
 ```
 fastapi
 sqlalchemy 
@@ -43,25 +41,27 @@ jinja2
 aiofiles
 PyMySQL
 ```
-Dockerfile を次のように書いていきます。
+
+続いて、`Dockerfile` を次のように書いていきます。
+
 ```Dockerfile
 FROM python:3.8.0-alpine
 WORKDIR /api
 # gcc ,openssl をインストールしなければ、python のセットアップ時にエラーを起こしてしまう。
 RUN apk add build-base libffi-dev
 COPY ./requirement.txt .
-EXPOSE 8000
 RUN pip install --upgrade setuptools && pip install -r requirement.txt
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 ```
 
-この時、`EXPOSE 8000`,`--host 0:0:0:0` を設定しなければ、コンテナが起動できても、ローカルホストへアクセスできません。
+この時、`--host 0:0:0:0` を設定しなければ、コンテナが起動できても、ローカルホストへアクセスできません。
 Flask や Rails などのフレームワークでDocker で起動したにもかかわらずlocalhost へアクセスできない場合は、
-**EXPOSE の設定**や、**起動ホストを'0.0.0.0'** と設定して起動してみてください。
+**起動ホストを'0.0.0.0'** と設定して起動してみてください。
 
 次に、docker-compose.yml を利用して構築していきます。
 
+- docker-compose.yaml
 ```yaml
 version: '3.0'
 services:
@@ -93,7 +93,8 @@ services:
 ```
 
 ## Hello World 
-では、実際にコードを実装していきます。
+
+まず、このフレームワークを実装して **"Hello World"** と返すよう実装します。
 
 ```python 
 
@@ -107,7 +108,7 @@ async def root():
 ```
 
 この時、`async def (関数)`として、非同期関数で実装するほうががいいとされます。
-このことについては、公式ドキュメントこちらを参照してください。
+このことについては、公式ドキュメントを参照してください。
 
 実行するには、次のようにします。
 

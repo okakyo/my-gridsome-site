@@ -8,7 +8,7 @@ slugs: gridsome-blog
 description: >-
   こんにちは、おかきょーです。今回は、Gridsome を利用してポートフォリオ兼ブログとしての機能をもつサイトを作ってみました。Netlifyを利用して、無料でサイトを公開、運用する方法を書いて行きたいと思います。 
 thumbnail: /uploads/coffee-2737047_640-min.jpg  
-date: 2030-1-19T20:15:41.251Z
+date: 2020-1-19T20:15:41.251Z
 ---
 
 ## Gridsome とは何か

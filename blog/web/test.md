@@ -340,6 +340,8 @@ plugins: [
 以上で、Gridsome を利用する際、独自に設定しなくてはならないことを書きました。  
 あとは、Vue.js と同じ要領で コンポーネントを設計して行きます。
 
+[![okakyo/my-gridsome-site - GitHub](https://gh-card.dev/repos/okakyo/my-gridsome-site.png?fullname)](https://github.com/okakyo/my-gridsome-site)
+
 ## 参考サイト
 - [Gridsome 公式サイト](https://gridsome.org/)
 - [GridsomeでNetlify CMSを利用する \| ぺんすけブログ - ぺんすけブログ](https://pensuke.work/posts/gridsome-netlify-cms)

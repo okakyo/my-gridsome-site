@@ -157,6 +157,11 @@ export default {
 }
 .markdown h3 {
   margin: 1rem  0.5rem ;
+  border:1px solid #ddd ; 
+  background-color: #cde4ff;
+  border-left: #90caf9  solid 10px ;
+  padding: 0.5em 1em;
+  width:90%;
 }
 .markdown h1, .markdown h2 {
   border:1px solid #ddd ;

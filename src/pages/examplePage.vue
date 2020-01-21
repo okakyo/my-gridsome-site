@@ -27,33 +27,6 @@
 </template>
 <script>
 
-export default {
-    methods:{
-        validateLogin(){
-            window.liff.login({ redirectUri: "https://1b7c4723.ngrok.io/example-page" });
-        }
-    },
-    created:async ()=>{
-        
-        await window.liff.init({
-            liffId: "xxxxx" // ! 先ほどメモしたものを入力してください。
-        });
-
-        //LINE内のブラウザかどうか
-        if(window.liff.isInClient()){
-            alert('LINE内のブラウザ');
-            this.getProfile(); //LINE内で開いた場合は特にログイン処理なしで大丈夫
-        }else{
-        //外部ブラウザかどうか
-            if(window.liff.isLoggedIn()){
-                alert('外部ブラウザ');
-                this.getProfile();
-            }else{
-                alert("LINEでログインされていません");
-            }
-        }
-    }
-}
 </script>
 <style scoped>
 

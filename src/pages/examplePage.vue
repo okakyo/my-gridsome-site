@@ -21,7 +21,7 @@
                             v-list
                                 v-list-item
                                     v-spacer
-                                    v-btn(color="info" outlined width="30%" @click="validateLogin()") BLE 認証
+                                    v-btn(color="info" outlined width="30%" ) BLE 認証
                                     v-spacer
                         
 </template>

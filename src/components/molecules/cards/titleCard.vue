@@ -9,7 +9,7 @@
                     v-container
                         v-layout(row wrap)
                             v-flex(xs12 md5  lg4).pa-8
-                                v-img.ml-2(height="100%" width="100%" :src="card.thumbnail" )
+                                v-img.ml-2(height="100%" width="100%" :src="card.thumbnail"  loading="lazy")
                             v-flex(xs12 md7 lg8)
                                 v-card-text
                                     v-card-title.py-1 

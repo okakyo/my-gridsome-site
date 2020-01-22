@@ -4,7 +4,7 @@
             v-flex(xs12 md5 )
                 v-row(justify="space-around" )
                     v-avatar(:size="imgSize" :tile="isLogo")
-                        v-img(:src="imgUrl" )
+                        v-img(:src="imgUrl"  loading="lazy")
                     
             v-flex(xs12 md10 )
                 v-list

@@ -2,7 +2,7 @@
     v-card-text
         v-row
             v-flex(xs12 md5 )
-                v-row(justify="space-around" )
+                v-row(justify="space-around")
                     v-avatar(:size="imgSize" :tile="isLogo")
                         v-img(:src="imgUrl"  loading="lazy")
                     

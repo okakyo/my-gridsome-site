@@ -7,7 +7,7 @@
                 // Twitter, Facebook, Qiita, GitHub
                 v-btn.ma-3(icon v-for="icon in snsIcons" :key="icon.title" :href="icon.href")
                     v-avatar
-                        v-img(:src="icon.url")
+                        v-img(:src="icon.url" loading="lazy" :lazy-src="icon.url")
 
 </template>
 

@@ -7,7 +7,7 @@
                     :elevation="hover ? 12 : 2"
                 )
                     v-card-text
-                        v-img(:src="card.imgURL")
+                        v-img(:lazy-src="card.imgURL" :src="card.imgURL" loading="lazy")
                         v-divider
                         v-card-title {{card.title}}
 

@@ -15,7 +15,7 @@
         v-container
           v-layout(justify-center)
             v-flex(xs8)
-              v-img(width="100%" :src="$page.doc.thumbnail" )
+              v-img(width="100%" :lazy-src="$page.doc.thumbnail" loading="lazy" :src="$page.doc.thumbnail" )
       p.description {{$page.doc.description}}
       .markdown(v-html="$page.doc.content")
 

@@ -11,6 +11,42 @@ thumbnail: /uploads/coffee-2737047_640-min.jpg
 date: 2020-1-19T20:15:41.251Z
 ---
 
+このサイトについてのGitHub はこちらです。
+
+
+<div class="embed-wrapper" style="border:solid 1px rgba(0,0,0,.1);  max-width:500px;">
+  <div class="embed-wrapper-inner"  style="padding:12px;" >
+    
+    <div class="embed-content with-thumb">
+      
+      
+        <div class="thumb-wrapper">
+          <a href="https://github.com/okakyo/my-gridsome-site" target="_blank">
+            <img src="https://cdn.image.st-hatena.com/image/square/97b9c3fb0dc19ade8f5d40f221477b83f0966e9d/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F29594820%3Fs%3D400%26v%3D4" class="thumb" style="float:right;width:100px;" >
+          </a>
+        </div>
+      
+      <div class="entry-body">
+        <span class="entry-title">
+          <a href="https://github.com/okakyo/my-gridsome-site" target="_blank">okakyo/my-gridsome-site</a>
+        </span>
+        <div class="entry-content">
+          Contribute to okakyo/my-gridsome-site development by creating an account on GitHub.
+        </div>
+      </div>
+    </div>
+    <div class="embed-footer">
+      
+      <a href="https://github.com/okakyo/my-gridsome-site" target="_blank"><img src="https://cdn-ak.favicon.st-hatena.com?url=https%3A%2F%2Fgithub.com%2Fokakyo%2Fmy-gridsome-site" alt="github.com" title="github.com" class="favicon"> github.com</a>
+      
+      <img src="https://s.st-hatena.com/entry.count.image?uri=https%3A%2F%2Fgithub.com%2Fokakyo%2Fmy-gridsome-site" alt="" class="star-count" />
+      <a href="https://b.hatena.ne.jp/entry/s/github.com/okakyo/my-gridsome-site" target="_blank"><img src="https://b.hatena.ne.jp/entry/image/https://github.com/okakyo/my-gridsome-site" class="bookmark-count"/></a>
+    </div>
+  </div>
+</div>
+
+ 
+
 ## Gridsome とは何か
 Gridsome は、Vue.js で利用できる JAMStack フレームワークのひとつです。
 普通のVue.js とは異なり、GraphQL を利用してブログ記事のデータを管理するため、
@@ -340,9 +376,7 @@ plugins: [
 以上で、Gridsome を利用する際、独自に設定しなくてはならないことを書きました。  
 あとは、Vue.js と同じ要領で コンポーネントを設計して行きます。
 
-[![okakyo/my-gridsome-site - GitHub](https://gh-card.dev/repos/okakyo/my-gridsome-site.png?fullname)](https://github.com/okakyo/my-gridsome-site)
 
-## 参考サイト
 - [Gridsome 公式サイト](https://gridsome.org/)
 - [GridsomeでNetlify CMSを利用する \| ぺんすけブログ - ぺんすけブログ](https://pensuke.work/posts/gridsome-netlify-cms)
 - [Gridsomeを利用して簡単なサイトを作成しよう](https://blog.nakamu.life/posts/gridsome-starter)

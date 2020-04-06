@@ -40,6 +40,7 @@ query Doc ($path: String!) {
 }
 
 </page-query>
+
 <script>
 import rightSidebar from '../components/templates/Sidebar/rightSidebar.vue'
 import BlogBase from "../components/templates/blogBase";
@@ -107,7 +108,7 @@ export default {
     return {
       title: this.$page.doc.title,
       meta: [
-        {name: 'twitter:card', content:"summary" },
+        {name: 'twitter:card', content:"summar" },
         {name: 'twitter:site', content:"おかきょー" },
         {name: 'og:url', content:`https://okakyo.myvnc.com${this.$page.doc.path}` },
         {name: 'og:title', content:this.$page.doc.title },
@@ -155,15 +156,23 @@ export default {
   max-width: 90%;
   margin: 0.5rem;
 }
-.markdown h3 {
-  margin: 1rem  0.5rem ;
-  border:1px solid #ddd ; 
-  background-color: #cde4ff;
-  border-left: #90caf9  solid 10px ;
-  padding: 0.5em 1em;
-  width:90%;
+
+.markdown h2 {
+  margin-bottom:0.5em;
+  padding: 0.5em;/*文字周りの余白*/
+  color: #010101;/*文字色*/
+  background: #eaf3ff;/*背景色*/
+  
 }
-.markdown h1, .markdown h2 {
+
+.markdown h3 {
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  margin-bottom:0.3em;
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #7db4e6;/*左線*/
+}
+.markdown h1 {
   border:1px solid #ddd ;
   margin: 2rem 0rem;
   background-color: #fff8e8;

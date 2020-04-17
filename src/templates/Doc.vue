@@ -128,7 +128,7 @@ export default {
   
   line-height: 2em;
 }
-.markdown b {
+.markdown strong {
   border-bottom: 2px solid #ff3333;
   font-size: 120%;
 }

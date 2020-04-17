@@ -128,6 +128,10 @@ export default {
   
   line-height: 2em;
 }
+.markdown b {
+  border-bottom: 2px solid #ff3333;
+  font-size: 120%;
+}
 .markdown{
   padding: 5%;
   padding-top: 3%;

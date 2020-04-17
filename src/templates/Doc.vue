@@ -129,8 +129,7 @@ export default {
   line-height: 2em;
 }
 .markdown strong {
-  border-bottom: 2px solid #ff3333;
-  font-size: 120%;
+  background: linear-gradient(transparent 60%, #ffff66 60%);
 }
 .markdown{
   padding: 5%;

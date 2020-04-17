@@ -130,6 +130,7 @@ export default {
 }
 .markdown strong {
   background: linear-gradient(transparent 60%, #ffff66 60%);
+  color: #ff3333;
 }
 .markdown{
   padding: 5%;

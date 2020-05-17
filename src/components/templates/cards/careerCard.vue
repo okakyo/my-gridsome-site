@@ -40,7 +40,11 @@ export default {
                  name:"Team Lab",
                  date:"2019年 9月 17日 ~27 日",
                  works: "SpringBoot, Solrを利用したECサイトの検索機能を実装を経験した"
-                },
+                }{
+                    name:"Lead Effort",
+                    date:"2020年 3月 1日 ~ ",
+                    works: "Hudlook の設計、実装、改善を行った"
+                },,
                 
                 
             ]

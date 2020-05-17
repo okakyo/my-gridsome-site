@@ -46,7 +46,7 @@ export default {
                 {
                  title: "TypeScript",
                  detail:"",
-                 rating:3,
+                 rating:4,
                  imgURL:"https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png",
                 },
                 {
@@ -87,7 +87,7 @@ export default {
                 {
                  title: "React",
                  detail:"",
-                 rating:3,
+                 rating:4,
                  imgURL:"https://cdn.worldvectorlogo.com/logos/react.svg",
                 },
                 {

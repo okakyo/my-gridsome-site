@@ -45,7 +45,7 @@ export default {
                     name:"Lead Effort",
                     date:"2020年 3月 1日 ~ ",
                     works: "Hudlook の設計、実装、改善を行った"
-                },,
+                },
                 
                 
             ]

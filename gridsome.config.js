@@ -38,15 +38,14 @@ module.exports = {
         defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
         whitelist: ['v-application', 'v-application--wrap','layout','row','col'],
         whitelistPatterns: [
-            /^v-((?!application).)*$/,
+          /^v-((?!application).)*$/,
           /^theme--*/,
           /.*-transition/,
           /^justify-*/,
           /^p*-[0-9]/,
           /^m*-[0-9]/,
           /$*-text/,
-          /^text--*/,
-
+          /^text--*/
         ],
         whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/]
       }

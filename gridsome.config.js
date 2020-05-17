@@ -44,6 +44,8 @@ module.exports = {
           /^justify-*/,
           /^p*-[0-9]/,
           /^m*-[0-9]/,
+          /$*-text/,
+          /^text--*/,
 
         ],
         whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/]

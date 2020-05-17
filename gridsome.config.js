@@ -23,7 +23,32 @@ module.exports = {
 
   plugins: [
     'gridsome-plugin-pug' ,
+    {
+      use: 'gridsome-plugin-purgecss',
+      // default options, the following will be included if you don't provide anything
+      options: {
+        content: [
+          './src/**/*.vue',
+          './src/**/*.js',
+          './src/**/*.jsx',
+          './src/**/*.md',
+          './node_modules/vuetify/dist/vuetify.js',
+          'node_modules/prismjs/**/*.js'
+        ],
+        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+        whitelist: ['v-application', 'v-application--wrap','layout','row','col'],
+        whitelistPatterns: [
+            /^v-((?!application).)*$/,
+          /^theme--*/,
+          /.*-transition/,
+          /^justify-*/,
+          /^p*-[0-9]/,
+          /^m*-[0-9]/,
 
+        ],
+        whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/]
+      }
+    },
     {
       use: `gridsome-plugin-netlify-cms`,
       options: {

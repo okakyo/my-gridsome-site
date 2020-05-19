@@ -3,10 +3,10 @@
         template(v-slot:content)
             v-layout(row wrap)
                 v-flex(xs12 md4 lg3 v-for="ability in sortedByRating" :key="ability.title")
-                    card-content.pa-2(:title="ability.title", :imgUrl="ability.imgURL" :isLogo="isLogo")
-                        template(v-slot:detail)
-                            v-rating(:value="ability.rating" half-increments background-color="yellow darken-2" color="yellow darken-2" readonly small)
-                            v-divider
+                    v-card.ma-3
+                        card-content.pa-5(:title="ability.title", :imgUrl="ability.imgURL" :isLogo="isLogo")
+                            template(v-slot:detail)
+                                v-rating(:value="ability.rating" half-increments background-color="yellow darken-2" color="yellow darken-2" readonly small)
 
 </template>
 

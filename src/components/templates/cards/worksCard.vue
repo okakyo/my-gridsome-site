@@ -3,7 +3,7 @@
         template(v-slot:content)
             v-layout(row wrap)
                 v-flex.pa-2(xs12 md4 lg3  v-for="work in worksInfo" :key="work.title")
-                    img-card(:work="work")
+                    img-card.ma-3(:work="work")
 </template>
 <script>
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-card(outlined)
+    v-card
         v-img(:lazy-src="work.imgURL" :src="work.imgURL" height="200px"  loading="lazy")
         v-card-title.headline--title
             h4 {{work.title}}

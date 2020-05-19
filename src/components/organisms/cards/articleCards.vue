@@ -1,12 +1,13 @@
 <template lang="pug">
-    v-card.ma-3
-        v-card-title
-            v-spacer
-            h1.pa-1 {{title}}
-            v-spacer
-        v-divider
-        v-card-text
-            slot(name="content")
+    div
+        v-card.ma-3
+            v-card-title
+                v-spacer
+                h1.pa-1 {{title}}
+                v-spacer
+        v-card(flat).ma-3
+            v-card-text.grey.lighten-4
+                slot(name="content")
 </template>
 
 <script >

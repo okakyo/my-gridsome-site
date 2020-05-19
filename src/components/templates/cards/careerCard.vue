@@ -3,10 +3,10 @@
         template(v-slot:content)
             v-layout(row wrap)
                 v-flex.pa-2(xs12 md6 lg4  v-for="company in workedCompanyInfo" :key="company.name")
-                    card-content(:imgUrl="company.logoUrl",:title="company.name",:subTitle="company.date")
-                        template(v-slot:detail)  
-                            p {{company.works}}
-                            v-divider
+                    v-card.ma-3
+                        card-content(:imgUrl="company.logoUrl",:title="company.name",:subTitle="company.date")
+                            template(v-slot:detail)  
+                                p {{company.works}}
 </template>
 <script>
 

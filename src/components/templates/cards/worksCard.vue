@@ -20,19 +20,19 @@ export default {
                 {
                     title:"ポートフォリオ",
                     hrefURL:"/",
-                    imgURL:"/my-portfolio.png",
+                    imgURL:"/index/works/my-portfolio.png",
                     GitHub:"https://github.com/okakyo/gridSome", 
                  },
                  {
                     title: "飲み会提案ボット",
                     hrefURL:"https://www.line-community.me/bot_detail?botid=5baf522e851f74632343b187",
-                    imgURL:"https://obs.line-scdn.net/0hSKCEp6DJDGR-PCGtgDFzM19hBwZNXhJvXFpEAlo0WlRTD0pcF1pLVlo0VgZUDR87Rg4UVTU8WgZbCEo6RB9CCw9vUgRWXA/f256x256",
+                    imgURL:"/index/works/f256x256.png",
                     GitHub:"https://github.com/silloi/nomikai-suggest-bot",
                  },
                  {
                      title:"危険地帯アラート",
                      hrefURL:"https://dangeralert.herokuapp.com/",
-                     imgURL:"/danger-alert.png",
+                     imgURL:"/index/works/danger-alert.png",
                      GitHub:"https://github.com/okakyo/DangerAlert"
                  }
 

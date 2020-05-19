@@ -24,7 +24,7 @@ export default {
         return{
             title: "Oka Kyohei",
             subTitle: "0622okakyo@gmail.com",
-            image: "/IMG_1267.jpeg",
+            image: "/index/profile/IMG_1267.jpeg",
             imgSize:80,
             snsIcons:[
                 {title:"Twitter",url:"https://gyazo.com/27efa615afe6bbdfabc1bffc9daaf15b/thumb/1000",href:"https://twitter.com/31415O_Kyo"},

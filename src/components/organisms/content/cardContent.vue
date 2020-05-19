@@ -33,7 +33,7 @@ export default {
         },
         imgUrl:{
             type:String,
-            default: '/noimage.png'
+            default: '/index/util/noimage.png'
         },
     }
     

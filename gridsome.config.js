@@ -63,10 +63,22 @@ module.exports = {
         cacheTime: 600000, // default
         exclude: [],
         config: {
-          '/*': {
+          '/blog/*': {
             changefreq: 'weekly',
-            priority: 0.5
-          }
+            priority: 0.8
+          },
+          '/tag/*':{
+            changefreq: 'weekly',
+            priority: 0.6
+          },
+          '/article/*':{
+            changefreq: 'weekly',
+            priority: 0.7
+          },
+          '/':{
+            changefreq:'weekly',
+            priority: 0.4
+          },
         }
       }
     },

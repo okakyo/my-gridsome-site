@@ -72,7 +72,7 @@ $ npm install -save-dev pug gridsome-plugin-pug
 とした上で、`gridsome.config.js` の **plugin** を次の文を書き足します。
 
 
-```gridsome.config.js 
+```js 
 plugins: [
     'gridsome-plugin-pug',
 ]
@@ -89,7 +89,7 @@ $ npm install --save-dev webpack-node-externals
 
 続きまして、`/src/main.js` に次のように設定します。
 
-```/src/main.js
+```js
 import DefaultLayout from '~/layouts/Default.vue'
 
 // 次のライブラリをimport します。
@@ -127,7 +127,7 @@ export default function (Vue, { router, head, isClient,appOptions }) {
 ```
 最後に、`gridsome.server.js` を次のように書いて行きます。
 
-```gridsome.server.js
+```js
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = function (api) {
@@ -162,7 +162,7 @@ $npm install --save-dev gridsome-plugin-purgecss
 次に、PurgeCSS の詳細な設定を行います。この設定がしっかりと行われていないと、Vuetify のCSS 情報がすべて削除されてしまう
 可能性があるので特に気を付けて実装する必要があります。
 
-```gridsome.config.js
+```js
 plugins: [
    （省略）
      {
@@ -214,7 +214,7 @@ $ npm install --save-dev @gridsome/remark-prismjs
 
 そして、`gridsome.config.js` にて **plugins**　で次のように設定します。
 
-```gridsome.config.js
+```js
 plugins: [
     'gridsome-plugin-pug',
     // 以下を追加
@@ -239,7 +239,7 @@ plugins: [
 `Doc.vue` は次のように実装します。
 
 
-```Doc.vue
+```vue
 
 <template lang="pug">
   Layout
@@ -305,7 +305,7 @@ $ npm install --save netlify-cms gridsome-plugin-netlify-cms
 CMS を有効にするには、src ファイルないに, admin ディレクトリを構築します。
 admin ディレクトリ内に、`config.yml, index.html, index.js` を次のように設定します。
 
-```config.yaml
+```yaml
 
 backend:
   name: github
@@ -333,7 +333,7 @@ collections:
 
 ```
 
-```index.html
+```html
 <!doctype html>
 <html>
 <head>
@@ -364,7 +364,7 @@ Netlify の管理画面で、
 タグ機能を有効にするには、マークダウンで編集した `gridsome.config.js` の**plugin** に以下のコードを追加してください。
 下に書かれてある, ` refs `の要素を設定することで、タグ機能を利用することができます。
 
- ```gridsome.config.js
+ ```js
 plugins: [
     'gridsome-plugin-pug' 
     {

@@ -57,7 +57,19 @@ module.exports = {
         publicPath: `/admin`
       }
     },
-    
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: [],
+        config: {
+          '/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          }
+        }
+      }
+    },
     
     {
       use: '@gridsome/source-filesystem',

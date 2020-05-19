@@ -128,21 +128,24 @@ export default {
   
   line-height: 2em;
 }
-.markdown strong {
-  background: linear-gradient(transparent 60%, #ffff66 60%);
-  color: #ff3333;
-}
+
 .markdown{
   padding: 5%;
   padding-top: 3%;
   
 }
 .markdown p {
-  line-height: 2em;
+  padding:0.75em;
+  line-height: 1.8em;
 }
+.markdown ul {
+  margin-bottom: 1.5em;
+}
+
 .markdown li {
   line-height: 2em;
   margin-block-end: 0.5em;
+ 
 }
 
 .markdown code {
@@ -162,7 +165,7 @@ export default {
 }
 
 .markdown h2 {
-  margin-bottom:0.5em;
+  margin-bottom :0.75em ;
   padding: 0.5em;/*文字周りの余白*/
   color: #010101;/*文字色*/
   background: #eaf3ff;/*背景色*/
@@ -171,7 +174,7 @@ export default {
 
 .markdown h3 {
   padding: 0.25em 0.5em;/*上下 左右の余白*/
-  margin-bottom:0.3em;
+  margin-bottom:0.75em;
   color: #494949;/*文字色*/
   background: transparent;/*背景透明に*/
   border-left: solid 5px #7db4e6;/*左線*/

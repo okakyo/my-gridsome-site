@@ -11,7 +11,7 @@
             h4 おかきょーのブログ
         v-spacer
         v-toolbar-title(v-for="header in headersUrl" :key="header.title")
-            v-btn(color="primary" text :href="header.url")
+            v-btn(color="primary" text :to="header.url")
                 h4.white--text.mr-2 {{header.title}}
 
 </template>

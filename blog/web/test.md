@@ -11,42 +11,6 @@ thumbnail: /uploads/coffee-2737047_640-min.jpg
 date: 2020-1-19T20:15:41.251Z
 ---
 
-このサイトについてのGitHub はこちらです。
-
-
-<div class="embed-wrapper" style="border:solid 1px rgba(0,0,0,.1);  max-width:500px;">
-  <div class="embed-wrapper-inner"  style="padding:12px;" >
-    
-    <div class="embed-content with-thumb">
-      
-      
-        <div class="thumb-wrapper">
-          <a href="https://github.com/okakyo/my-gridsome-site" target="_blank">
-            <img src="https://cdn.image.st-hatena.com/image/square/97b9c3fb0dc19ade8f5d40f221477b83f0966e9d/backend=imagemagick;height=200;version=1;width=200/https%3A%2F%2Favatars0.githubusercontent.com%2Fu%2F29594820%3Fs%3D400%26v%3D4" class="thumb" style="float:right;width:100px;" >
-          </a>
-        </div>
-      
-      <div class="entry-body">
-        <span class="entry-title">
-          <a href="https://github.com/okakyo/my-gridsome-site" target="_blank">okakyo/my-gridsome-site</a>
-        </span>
-        <div class="entry-content">
-          Contribute to okakyo/my-gridsome-site development by creating an account on GitHub.
-        </div>
-      </div>
-    </div>
-    <div class="embed-footer">
-      
-      <a href="https://github.com/okakyo/my-gridsome-site" target="_blank"><img src="https://cdn-ak.favicon.st-hatena.com?url=https%3A%2F%2Fgithub.com%2Fokakyo%2Fmy-gridsome-site" alt="github.com" title="github.com" class="favicon"> github.com</a>
-      
-      <img src="https://s.st-hatena.com/entry.count.image?uri=https%3A%2F%2Fgithub.com%2Fokakyo%2Fmy-gridsome-site" alt="" class="star-count" />
-      <a href="https://b.hatena.ne.jp/entry/s/github.com/okakyo/my-gridsome-site" target="_blank"><img src="https://b.hatena.ne.jp/entry/image/https://github.com/okakyo/my-gridsome-site" class="bookmark-count"/></a>
-    </div>
-  </div>
-</div>
-
- 
-
 ## Gridsome とは何か
 Gridsome は、Vue.js で利用できる JAMStack フレームワークのひとつです。
 普通のVue.js とは異なり、GraphQL を利用してブログ記事のデータを管理するため、
@@ -58,17 +22,18 @@ Gridsome は、Vue.js で利用できる JAMStack フレームワークのひと
 
 今回のアプリを構築するにあたり、主に使用したライブラリは次の通りです。
 
-- #### Gridsome
-- #### Vuetify
-- #### Pug 
-- #### Netlify CMS  
+- **Gridsome**
+- **Vuetify**
+- **Pug** 
+- **Netlify CMS**  
 
 まず、npm を利用して環境を構築していきます。
 
 ``` bash
-$ npm install -g gridsome 
+$ npm install --global @gridsome/cli
 ```
 インストールが完了したら、
+
 ```bash
 $ gridsome create new-site 
 ```
@@ -81,6 +46,7 @@ Pug とは、AltHTML の一つの言語で、以下の例のように、イン�
 してくれるのが特徴です。
 
 例: HTML で実装した場合
+
 ```html
 <div class="title-head">
   <h1>
@@ -88,6 +54,7 @@ Pug とは、AltHTML の一つの言語で、以下の例のように、イン�
   </h1>
 </div>
 ```
+
 例：Pugで実装した場合
 
 ```pug
@@ -98,12 +65,14 @@ Pug とは、AltHTML の一つの言語で、以下の例のように、イン�
  普通のHTMLと比べて、コードの量が少なくなるだけでなく、各要素が終わりであることを示すために、"</(要素名)>" を書く必要がありません。そのため、修正し忘れることを防いでくれます。
 
 使えるようにするには、
+
 ```bash 
-$ npm install -save-dev pug @gridsome/plugin-pug
+$ npm install -save-dev pug gridsome-plugin-pug
 ```
 とした上で、`gridsome.config.js` の **plugin** を次の文を書き足します。
-- gridsome.config.js
-```js
+
+
+```gridsome.config.js 
 plugins: [
     'gridsome-plugin-pug',
 ]
@@ -112,6 +81,7 @@ plugins: [
 続いて、Vuetify の設定も行います。Vuetify とは、Vue で利用できるマテリアルデザインコンポーネントフレームワークです。ボタンやテーブルといったコンポーネントがあらかじめ用意されているため、１からデザインの設計をすることなく利用できるのが特徴です。
 
 まず、Vuetify ライブラリと、webpack を編集するライブラリををnpm からインストールします。
+
 ```bash
 $ npm install --save vuetify 
 $ npm install --save-dev webpack-node-externals
@@ -119,10 +89,7 @@ $ npm install --save-dev webpack-node-externals
 
 続きまして、`/src/main.js` に次のように設定します。
 
-
-- /src/main.js
-
-```js
+```/src/main.js
 import DefaultLayout from '~/layouts/Default.vue'
 
 // 次のライブラリをimport します。
@@ -159,9 +126,8 @@ export default function (Vue, { router, head, isClient,appOptions }) {
 
 ```
 最後に、`gridsome.server.js` を次のように書いて行きます。
-- gridsome.server.js
 
-```js
+```gridsome.server.js
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = function (api) {
@@ -182,6 +148,60 @@ module.exports = function (api) {
 
 これにより、Gridsome でVuetify を使えるように設定しました。
 
+## PurgeCSS を利用して、使われていないCSS を削除する
+
+Vuetify はとても便利なマテリアルフレームワークですが、フレームワーク単体を使用するにはとても重くて
+読み込みに時間がかかります。
+
+そこで、PurgeCSS を利用して、使用していないCSS ファイルを削除して読み込み時間を短縮します。
+
+```bash
+$npm install --save-dev gridsome-plugin-purgecss
+```
+
+次に、PurgeCSS の詳細な設定を行います。この設定がしっかりと行われていないと、Vuetify のCSS 情報がすべて削除されてしまう
+可能性があるので特に気を付けて実装する必要があります。
+
+```gridsome.config.js
+plugins: [
+   （省略）
+     {
+      use: 'gridsome-plugin-purgecss',
+      // default options, the following will be included if you don't provide anything
+      options: {
+        content: [
+          './src/**/*.vue',
+          './src/**/*.js',
+          './src/**/*.jsx',
+          './src/**/*.md',
+          './node_modules/vuetify/dist/vuetify.js',
+          'node_modules/prismjs/**/*.js'
+        ],
+        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+
+        // 以下のWhiteList の設定をしなければ、Vuetify のCSS が適用されなくなるので特に注意 !
+
+        whitelist: ['v-application', 'v-application--wrap','layout','row','col'],
+        whitelistPatterns: [
+          /^v-((?!application).)*$/,
+          /^theme--*/,
+          /.*-transition/,
+          /^justify-*/,
+          /^p*-[0-9]/,
+          /^m*-[0-9]/,
+          /^text--*/,
+          /--text$/,
+        ],
+
+        whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/]
+      }
+    },
+]
+
+```
+
+以上で PurgeCSS の設定を行いました。
+
 ## Markdown でブログ記事を管理する
 このGridsome は、Markdown ファイルで記事の保存、GraphQL を通して記事の読み込みを行います。
 マークダウンを利用して記事を利用するために、次のライブラリをインストールします。
@@ -194,9 +214,7 @@ $ npm install --save-dev @gridsome/remark-prismjs
 
 そして、`gridsome.config.js` にて **plugins**　で次のように設定します。
 
-- gridsome.config.js
-```js
-
+```gridsome.config.js
 plugins: [
     'gridsome-plugin-pug',
     // 以下を追加
@@ -219,8 +237,10 @@ plugins: [
 この TypeName では、**templates ファイル** で設定した **Doc.vue** をもとにマークダウンが表示されます。
 
 `Doc.vue` は次のように実装します。
-- Doc.vue
-```pug
+
+
+```Doc.vue
+
 <template lang="pug">
   Layout
     v-container
@@ -279,15 +299,13 @@ Netlify CMS については次の記事を参照してください。
 このCMS が使えるようにするには、npm にて、次のコマンドを実行します。
 
 ```bash
-$ npm install --save gridsome-plugin-netlify-cms
+$ npm install --save netlify-cms gridsome-plugin-netlify-cms
 ```
 
 CMS を有効にするには、src ファイルないに, admin ディレクトリを構築します。
 admin ディレクトリ内に、`config.yml, index.html, index.js` を次のように設定します。
 
-- config.yml
-
-```yaml
+```config.yaml
 
 backend:
   name: github
@@ -315,9 +333,7 @@ collections:
 
 ```
 
-- index.html
-
-```html
+```index.html
 <!doctype html>
 <html>
 <head>
@@ -332,6 +348,7 @@ collections:
 ```
 
 - index.js
+
 ```js
 import CMS from "netlify-cms"
 ```
@@ -347,7 +364,7 @@ Netlify の管理画面で、
 タグ機能を有効にするには、マークダウンで編集した `gridsome.config.js` の**plugin** に以下のコードを追加してください。
 下に書かれてある, ` refs `の要素を設定することで、タグ機能を利用することができます。
 
- ```js
+ ```gridsome.config.js
 plugins: [
     'gridsome-plugin-pug' 
     {
@@ -377,6 +394,7 @@ plugins: [
 あとは、Vue.js と同じ要領で コンポーネントを設計して行きます。
 
 
+## 参考サイト
 - [Gridsome 公式サイト](https://gridsome.org/)
 - [GridsomeでNetlify CMSを利用する \| ぺんすけブログ - ぺんすけブログ](https://pensuke.work/posts/gridsome-netlify-cms)
 - [Gridsomeを利用して簡単なサイトを作成しよう](https://blog.nakamu.life/posts/gridsome-starter)

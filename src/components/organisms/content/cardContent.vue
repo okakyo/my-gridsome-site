@@ -1,17 +1,18 @@
 <template lang="pug">
     v-card-text
-        v-row
+        v-row(justify="center" )
             v-flex(xs12 md5 )
-                v-row(justify="space-around")
+                v-row(justify="center")
                     v-avatar(:size="imgSize" :tile="isLogo")
                         v-img(:src="imgUrl" :lazy-src="imgUrl" loading="lazy")
                     
             v-flex.pa-3(xs12 md10 )
-                v-list
-                    v-card-title.headline--title
-                        h4 {{title}}
-                    v-card-subtitle {{subTitle}}
-                    slot(name="detail")
+                v-row(justify="center")
+                    v-list
+                        v-card-title.headline--title
+                            h4 {{title}}
+                        v-card-subtitle {{subTitle}}
+                        slot(name="detail")
 </template>
 <script>
 export default {

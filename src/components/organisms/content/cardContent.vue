@@ -1,12 +1,12 @@
 <template lang="pug">
     v-card-text
-        v-row(justify="center" )
-            v-flex(xs12 md5 )
+        v-row(justify="center")
+            v-flex(xs12 md3 )
                 v-row(justify="center")
                     v-avatar(:size="imgSize" :tile="isLogo")
                         v-img(:src="imgUrl" :lazy-src="imgUrl" loading="lazy")
                     
-            v-flex.pa-3(xs12 md10 )
+            v-flex.pa-3(xs12 md12 )
                 v-row(justify="center")
                     v-list
                         v-card-title.headline--title

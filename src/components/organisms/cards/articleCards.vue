@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        v-card.ma-3
+        v-card.my-3.mx-7
             v-card-title
                 v-spacer
                 h1.pa-1 {{title}}

@@ -2,7 +2,7 @@
     article-card(title="Career")
         template(v-slot:content)
             v-layout(row wrap)
-                v-flex.pa-2(xs12 md6 lg4  v-for="company in workedCompanyInfo" :key="company.name")
+                v-flex(xs12 md6 lg4  v-for="company in workedCompanyInfo" :key="company.name")
                     v-card.ma-3
                         card-content(:imgUrl="company.logoUrl",:title="company.name",:subTitle="company.date")
                             template(v-slot:detail)  

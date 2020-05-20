@@ -1,9 +1,9 @@
 <template lang="pug">
     article-card(title="Ability")
         template(v-slot:content)
-            v-layout(row wrap)
-                v-flex(xs6 md4 lg3 v-for="ability in sortedByRating" :key="ability.title")
-                    v-card.ma-3
+            v-row
+                v-col(xs=6 md=4 lg=3 v-for="ability in sortedByRating" :key="ability.title")
+                    v-card
                         card-content.pa-5(:title="ability.title", :imgUrl="ability.imgURL" :isLogo="isLogo")
                             template(v-slot:detail)
                                 v-rating(:value="ability.rating" half-increments background-color="yellow darken-2" color="yellow darken-2" readonly small)

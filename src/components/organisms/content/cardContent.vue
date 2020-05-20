@@ -6,7 +6,7 @@
                     v-avatar(:size="imgSize" :tile="isLogo")
                         v-img(:src="imgUrl" :lazy-src="imgUrl" loading="lazy")
                     
-            v-flex(xs12 md10 )
+            v-flex.pa-3(xs12 md10 )
                 v-list
                     v-card-title.headline--title
                         h4 {{title}}

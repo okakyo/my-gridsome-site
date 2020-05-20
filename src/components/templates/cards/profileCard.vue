@@ -1,14 +1,15 @@
 <template lang="pug">
     article-card(title="Profile")
         template(v-slot:content)  
-            v-card.ma-3
+            v-card
                 card-content(:title="title",:subTitle="subTitle",:imgUrl="image",:imgSize="imgSize")
                 v-divider
-                v-layout(justify="center")
+                v-container(justify="center")
                     // Twitter, Facebook, Qiita, GitHub
-                    v-btn.ma-3(icon v-for="icon in snsIcons" :key="icon.title" :href="icon.href")
-                        v-avatar
-                            v-img(:src="icon.url" loading="lazy" :lazy-src="icon.url")
+                    v-row(justify="center")
+                        v-btn.ma-2(icon v-for="icon in snsIcons" :key="icon.title" :href="icon.href")
+                            v-avatar
+                                v-img(:src="icon.url" loading="lazy" :lazy-src="icon.url")
 
 </template>
 

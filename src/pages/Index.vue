@@ -26,8 +26,19 @@
     import abilityCard from '../components/templates/cards/abilityCard.vue'
     import worksCard from '../components/templates/cards/worksCard.vue'
     export default {
-        metaInfo: {
-            title: 'Portfolio'
+        metaInfo() { 
+            return {
+            title: "OkaKyo's Portfolio",
+            meta: [
+                {name: 'twitter:card', content:"summary_large_image" },
+                {name: 'twitter:site', content:"おかきょー" },
+                {name:'og:type', content:"website"},
+                {name: 'og:url', content:`https://okakyo.myvnc.com` },
+                {name: 'og:title', content:"OkaKyo's Portfolio"},
+                {name: 'og:description', content: "おかきょーのポートフォリオサイトです。" },
+                {name: "og:image", content: `https://okakyo.myvnc.com/index/profile/IMG_1267.jpeg` },
+                ]
+            }
         },
         components:{
 

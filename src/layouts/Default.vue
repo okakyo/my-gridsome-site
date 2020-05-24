@@ -26,6 +26,7 @@ import Headers from '../components/templates/Headers.vue';
 export default {
   components:
     {Headers},
+     
   props:{
     isShow:false
   },
@@ -38,6 +39,19 @@ export default {
            ],
        };
     },
+  metaInfo() { 
+    return {
+      title: this.$page.doc.title,
+      meta: [
+        {name: 'twitter:card', content:"summary_large_image" },
+        {name: 'twitter:site', content:"おかきょー" },
+        {name: 'og:url', content:`https://okakyo.myvnc.com` },
+        {name: 'og:title', content:"おかきょーのポートフォリオサイト"},
+        {name: 'og:description', content: "おかきょーのポートフォリオです。" },
+        {name: "og:image", content: `https://okakyo.myvnc.com/index/profile/IMG_1267.jpeg` },
+      ]
+    }
+  },
 }
 </script>
 

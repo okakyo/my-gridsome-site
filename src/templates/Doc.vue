@@ -108,7 +108,7 @@ export default {
     return {
       title: this.$page.doc.title,
       meta: [
-        {name: 'twitter:card', content:"summar" },
+        {name: 'twitter:card', content:"summary_large_image" },
         {name: 'twitter:site', content:"おかきょー" },
         {name: 'og:url', content:`https://okakyo.myvnc.com${this.$page.doc.path}` },
         {name: 'og:title', content:this.$page.doc.title },
